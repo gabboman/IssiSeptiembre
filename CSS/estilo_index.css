@@ -1,0 +1,29 @@
+body {
+	font-family:'Comic Sans MS'; 
+	background:url(../IMG/fondo_azul.jpg);
+	background-repeat:no-repeat;
+	display: block;
+	
+}
+
+#div_cabecera{
+	background:url(../IMG/MobileNation.JPG);
+	background-repeat:no-repeat;
+	height:150px;
+	position: relative;
+	left:150px;
+	float: center;
+}
+#div_lateral{
+	
+	position:relative;
+	bottom:107px;
+	width:150px;
+	height:800px;
+	
+}
+
+#contacto{
+	position:relative;
+	bottom:600px;
+}

@@ -1,0 +1,75 @@
+
+body{
+	background-color : #EED5B7;
+	background:url(../IMG/movil.jpg);
+	background-repeat:no-repeat;
+}
+
+input,select{
+	border: 1px solid black;
+}
+h1{
+
+	text-align: center;
+}
+#div_cabecera{
+	
+	height:90px;
+	position: relative;
+	
+}
+#div_submit{
+	text-align : center;
+}
+#label_cantidad,
+#label_calidadcamara,	
+#label_modelo,
+#label_marca,
+#label_pantalla,
+#label_teclado,
+#label_meminterna,
+#label_memoriaExterna,
+#label_gpu,
+#label_cpu
+{
+  display: block;
+  float: left;
+  text-align: right;
+  width: 10em;
+  padding-right: 0.5em;
+  font-weight : bold;  
+}
+#label_letra{
+	 font-weight : bold;
+}
+
+input#modelo {
+  width: 12em;
+}
+
+input#marca {
+  width: 20em;
+}
+input#pantalla {
+  width: 5em;
+}
+input#teclado {
+  width: 2em;
+}
+input#meminterna {
+  width: 2em;
+}
+input#memoriaExterna{
+  width: 3em;
+}
+input#cpu{
+  width: 3em;
+}
+input#gpu{
+  width: 3em;
+}
+
+input#calidadcamara{
+  width: 4em;
+}
+

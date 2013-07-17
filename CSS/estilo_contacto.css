@@ -1,0 +1,27 @@
+body {
+	font-family:'Comic Sans MS'; 
+	margin:0px;
+	background:url(../IMG/telefono.jpg);
+	
+}
+
+#div_cabecera{
+
+	height:90px;
+	position: relative;
+	bottom: 90px;
+}
+#div_central{
+	position:relative;
+	bottom: 800px;
+	color:red;
+	left:200px;
+}
+#div_lateral{
+	color:red;
+	position:relative;
+	bottom:107px;
+	width:150px;
+	height:800px;
+	
+}

@@ -1,0 +1,45 @@
+body{
+	background-color : #EED5B7;
+	background:url(../IMG/movil.jpg);
+	background-repeat:no-repeat;
+}
+
+input,select{
+	border: 1px solid black;
+
+}
+h1{
+
+	text-align: center;
+}
+#div_cabecera{
+	
+	height:90px;
+	position: relative;
+	
+}
+#div_submit{
+	text-align : center;
+}
+
+#label_operador,
+#label_tarifa
+{
+  display: block;
+  float: left;
+  text-align: right;
+  width: 10em;
+  padding-right: 0.5em;
+  font-weight : bold;  
+}
+#label_letra{
+	 font-weight : bold;
+}
+
+input#operador {
+  width: 12em;
+}
+
+input#tarifa {
+  width: 20em;
+}
