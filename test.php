@@ -4,7 +4,7 @@ function conectarBD(){
 
 $host = 'oci:name=localhost/XE';
 $username = 'server';
-$password = 'PASS';
+$password = 'password';
 
 try{
 
