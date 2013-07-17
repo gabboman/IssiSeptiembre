@@ -44,20 +44,20 @@ h1{
 }
 
 input#modelo {
-  width: 12em;
+  width: 6em;
 }
 
 input#marca {
-  width: 20em;
+  width: 6em;
 }
 input#pantalla {
-  width: 5em;
+  width: 6em;
 }
 input#teclado {
-  width: 2em;
+  width: 6em;
 }
 input#meminterna {
-  width: 2em;
+  width: 3em;
 }
 input#memoriaExterna{
   width: 3em;
@@ -66,10 +66,13 @@ input#cpu{
   width: 3em;
 }
 input#gpu{
-  width: 3em;
+  width: 6em;
 }
 
 input#calidadcamara{
-  width: 4em;
+  width: 3em;
 }
 
+input#cantidad{
+  width: 3em;
+ }

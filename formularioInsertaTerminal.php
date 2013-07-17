@@ -48,7 +48,7 @@ if (isset($_SESSION['errores']))
 				</div>
 				<div id="div_pantalla">
 					<label id="label_pantalla" for="terminal">pantalla</label>
-					<input id="pantalla" name="pantalla" type="text" pattern="[0-9]+x[0-9]+" required="required"value="<?php echo $formulario['pantalla']?>" />
+					<input id="pantalla" name="pantalla" type="text" title="Debe ser con este formato: 240x380" pattern="[0-9]+x[0-9]+" required="required"value="<?php echo $formulario['pantalla']?>" />
 				</div>
 				<div id="div_modelo">
 					<label id="label_modelo" for="terminal">modelo</label>
