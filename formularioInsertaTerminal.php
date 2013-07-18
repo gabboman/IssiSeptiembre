@@ -60,15 +60,15 @@ if (isset($_SESSION['errores']))
 				</div>
 				<div id="div_meminterna">
 					<label id="label_meminterna" for="terminal">meminterna</label>
-					<input id="meminterna" name="meminterna" type="text" required="required"value="<?php echo $formulario['meminterna']?>" />
+					<input id="meminterna" name="meminterna" type="number" required="required"value="<?php echo $formulario['meminterna']?>" />
 				</div>
 				<div id="div_memoriaExterna">
 					<label id="label_memoriaExterna" for="terminal">memoriaExterna</label>
-					<input id="memoriaExterna" name="memoriaExterna" type="text" required="required"value="<?php echo $formulario['memoriaExterna']?>" />
+					<input id="memoriaExterna" name="memoriaExterna" type="number" required="required"value="<?php echo $formulario['memoriaExterna']?>" />
 				</div>
 				<div id="div_gpu">
 					<label id="label_gpu" for="terminal">gpu</label>
-					<input id="gpu" name="gpu" type="num" required="required"value="<?php echo $formulario['gpu']?>" />
+					<input id="gpu" name="gpu" type="text" required="required"value="<?php echo $formulario['gpu']?>" />
 				</div>
 				<div id="div_cpu">
 					<label id="label_cpu" for="terminal">cpu</label>
@@ -76,11 +76,11 @@ if (isset($_SESSION['errores']))
 				</div>
 				<div id="div_calidadcamara">
 					<label id="label_calidadcamara" for="terminal">calidadcamara</label>
-					<input id="calidadcamara" name="calidadcamara" type="text" required="required"value="<?php echo $formulario['calidadcamara']?>" />
+					<input id="calidadcamara" name="calidadcamara" type="number" required="required"value="<?php echo $formulario['calidadcamara']?>" />
 				</div>
 				<div id="div_cantidad">
 					<label id="label_cantidad" for="terminal">cantidad</label>
-					<input id="cantidad" name="cantidad" type="number" required="required" min = "5" max="100"value="<?php echo $formulario['cantidad']?>" />
+					<input id="cantidad" name="cantidad" type="number" required="required" min = "5" "value="<?php echo $formulario['cantidad']?>" />
 				</div>
 				<div id="div_submit">
 					<input name="submit" id="submit" type="submit" class="submit" value="Enviar formulario" />
