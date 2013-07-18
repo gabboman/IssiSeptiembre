@@ -1,6 +1,6 @@
 <?php
 session_start();
-$datos_formulario = $_SESSION["formulario"];
+$form = $_SESSION["formulario"];
 
 session_destroy();
 
@@ -22,9 +22,11 @@ $conexion = conectarBD();
 			<h1>Lista de terminales que coinciden con su criterio de búsqueda</h1>
 			<?php
 			$con=conectarBD();
-			$stmt=$con->query("INSERT INTO TERMINAL (idterminal,marca,modelo,pantalla,teclado,memInterna,memExterna,gpu,cpu,camara,cantidad)'".$datos_formulario["marca"]."' AND MODELO LIKE '".$datos_formulario["modelo"]."'");
+			$insert="Insert Into Terminal (Idterminal,Marca,Modelo,Pantalla,Teclado,Meminterna,Memexterna,Gpu,Cpu,Camara,Cantidad) Values (Terminales.Nextval,'".$form['marca']."','".$form['modelo']."','".$form['pantalla']."','".$form['teclado']."',".$form['meminterna'].",".$form['memoriaExterna'].",'".$form['gpu']."',".$form['cpu'].",".$form['calidadcamara'].",".$form['cantidad'].");";
+			echo $insert;
+			$stmt=$con->query("Insert Into Terminal (Idterminal,Marca,Modelo,Pantalla,Teclado,Meminterna,Memexterna,Gpu,Cpu,Camara,Cantidad) Values (Terminales.Nextval,'".$form['marca']."','".$form['modelo']."','".$form['pantalla']."','".$form['teclado']."',".$form['meminterna'].",".$form['memoriaExterna'].",'".$form['gpu']."',".$form['cpu'].",".$form['calidadcamara'].",".$form['cantidad'].");");
 
-			}
+			
 			?>
 			<div id="div_volver">
 				Pulse <a href="Terminales.php">aquí</a> para volver a Terminales.
