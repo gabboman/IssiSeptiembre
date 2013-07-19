@@ -1,7 +1,7 @@
 <?php
 session_start();
 $datos_formulario = $_SESSION["formulario"];
-echo $datos_formulario["marca"];
+//echo $datos_formulario["marca"];//Esta linea fue usada para probar que funcionaba el sacar datos del formulario anterior. Guardada para la proxima vez que reutilice este código :D
 session_destroy();
 
 require_once ("test.php");
@@ -28,9 +28,9 @@ $conexion = conectarBD();
 			Values
 			 (Terminales.Nextval,'".$datos_formulario["marca"]."','".$datos_formulario["modelo"]."','".$datos_formulario["pantalla"]."','".$datos_formulario["teclado"]."',".$datos_formulario["meminterna"].",".$datos_formulario["memoriaExterna"].",'".$datos_formulario["gpu"]."',".$datos_formulario["cpu"].",".$datos_formulario["calidadcamara"].",".$datos_formulario["cantidad"].")";
 			//echo $insert;
-			$insert= utf8_encode($insert); 
+			//$insert= utf8_encode($insert);//Innecesario, pense que tenia un error por esto. Era por un maldito ; que sobraba. No hacia falta ponerlo en el insert! razones historicas XD
 			$stmt=$con->exec($insert);
-			echo $stmt;
+			//echo $stmt;//Esta linea mostraria el numero de filas afectadas. Lo dejo aqui, algun dia te servira para algo. a mi, a ti, o a alguien que venga a robarme el trabajo :D
 			
 			?>
 			<div id="div_volver">
