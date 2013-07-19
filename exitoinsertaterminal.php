@@ -15,15 +15,20 @@ $conexion = conectarBD();
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<title>Éxito</title>
+		<link type="text/css" rel="stylesheet" href="css/estilo_formularioTerminal.css">
 	</head>
 	<body>
 		<div>
 
-			<h1>Lista de terminales que coinciden con su criterio de búsqueda</h1>
+			<h1>Datos añadidos al servidor.</h1>
 			<?php
 			$con=conectarBD();			
-			$insert="INSERT into TERMINAL (Idterminal,Marca,Modelo,Pantalla,Teclado,Meminterna,Memexterna,Gpu,Cpu,Camara,Cantidad) Values (Terminales.Nextval,'".$datos_formulario["marca"]."','".$datos_formulario["modelo"]."','".$datos_formulario["pantalla"]."','".$datos_formulario["teclado"]."',".$datos_formulario["meminterna"].",".$datos_formulario["memoriaExterna"].",'".$datos_formulario["gpu"]."',".$datos_formulario["cpu"].",".$datos_formulario["calidadcamara"].",".$datos_formulario["cantidad"].");";
-			echo $insert;
+			$insert="INSERT into TERMINAL 
+			(Idterminal,Marca,Modelo,Pantalla,Teclado,Meminterna,Memexterna,Gpu,Cpu,Camara,Cantidad)
+			Values
+			 (Terminales.Nextval,'".$datos_formulario["marca"]."','".$datos_formulario["modelo"]."','".$datos_formulario["pantalla"]."','".$datos_formulario["teclado"]."',".$datos_formulario["meminterna"].",".$datos_formulario["memoriaExterna"].",'".$datos_formulario["gpu"]."',".$datos_formulario["cpu"].",".$datos_formulario["calidadcamara"].",".$datos_formulario["cantidad"].")";
+			//echo $insert;
+			$insert= utf8_encode($insert); 
 			$stmt=$con->exec($insert);
 			echo $stmt;
 			
