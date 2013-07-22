@@ -33,7 +33,7 @@ function validar($formulario) {
 	}
 	
 	
-	if (preg_match('/(0-9)+x(0-9)+/d', $formulario["pantalla"])) {
+	if (!(preg_match("/^[0-9]+x[0-9]+$/", $formulario["pantalla"]))) {
     $errores[]='La resolucion de pantalla debe ser del formato NxM siendo N y M números enteros';
 }
 

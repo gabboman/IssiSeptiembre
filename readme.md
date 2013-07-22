@@ -9,7 +9,7 @@ CAMBIOS OBLIGATORIOS
 OPCIONAL PARA SUBIR NOTA
 	1º Página de descripción
 	2º Javascript avanzado (Que?)
-	3º Expresiones regulares en PHP (Usada)
+	3º Expresiones regulares en PHP (formulario insertaterminal, ahi hay una para la resolución de pantalla)
 	4º Facilidad de navegación (no hagamos una pagina por la que perderse sea lo común, enseñarsela a un familiar o amigo para que pruebe)
 	5º Usabilidad
 	6º Modularidad de código tanto de cliente como de servidor (hm... puede ser chungo pero se supone que deberia haber sido asi siempre)
@@ -28,7 +28,12 @@ Changelog:
 		Modificado el verificar qeu todos los campos están rellenos: ahora es un for extendido en lugar de ir probando los atributos uno a uno. SE DEBERIA APLICAR A TODOS!
 	18/7/13
 	Resolución de pantalla ahora es string tipo numeroxnumero usando html5 en formulario inserta terminal
-	ARCHIVO SQL EN DIRECTORIO DE TRABAJO: MODIFICACIONES EN EL ARCHIVO: y si en vez de asignar primary keys manualmente asignamos un sys_guid?
+	ARCHIVO SQL EN DIRECTORIO DE TRABAJO: MODIFICACIONES EN EL ARCHIVO: ahora tenemos preparada una secuencia para los insert de terminales. Porque no hacer una secuencia común para todos?
+	22/7/13
+		Uso de expresiones regulares en php, FUNCIONANDO!
+		Preparación de modificar terminal. Será un formulario en el que buscas un terminal, luego en la lista hay que editarla para añadir enlace a edición. luego una pagina de edicion.
+			Creado formularioModificaTerminal1: buscar un terminal //usar la misma funcion que el de validación de busqueda!
+			luego mas!
 
 Trabajando en:
 	Poner bonita la página del insert
