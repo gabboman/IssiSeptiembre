@@ -32,6 +32,12 @@ function validar($formulario) {
     
 	}
 	
+	
+	if (preg_match('/(0-9)+x(0-9)+/d', $formulario["pantalla"])) {
+    $errores[]='La resolucion de pantalla debe ser del formato NxM siendo N y M números enteros';
+}
+
+	
 	/*
 	if (!(isset($formulario['marca']) && strlen($formulario['marca']) > 0))
 		$errores[] = 'El campo <b>Marca</b> no puede ser vacío';
