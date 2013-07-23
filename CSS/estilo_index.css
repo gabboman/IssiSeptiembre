@@ -7,9 +7,9 @@ body {
 }
 
 #div_cabecera{
-	background:url(../IMG/MobileNation.JPG);
+	background:url(../IMG/MobileNation.png);
 	background-repeat:no-repeat;
-	height:150px;
+	height:180px;
 	position: relative;
 	left:150px;
 	float: center;
