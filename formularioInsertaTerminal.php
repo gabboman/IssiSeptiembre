@@ -44,7 +44,7 @@ if (isset($_SESSION['errores']))
 			<form id="formulario" name="formulario" onsubmit="return validar()" action="tratamientoInsertTerminal.php" method="post">
 				<div id="div_marca">
 					<label id="label_marca" for="terminal">Marca</label>
-					<input id="marca" name="marca" type="text" value="<?php echo $formulario['marca']?>" />
+					<input id="marca" name="marca" required="required" type="text" value="<?php echo $formulario['marca']?>" />
 				</div>
 				<div id="div_pantalla">
 					<label id="label_pantalla" for="terminal">pantalla</label>

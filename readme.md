@@ -7,7 +7,7 @@ CAMBIOS OBLIGATORIOS
 	--DETALLES: PATRONES CON PHP, MYSQL Y JAVASCRIPT (y hasta html5 si me apuras!). Tirar de expresiones regulares
 	
 OPCIONAL PARA SUBIR NOTA
-	1º Página de descripción
+	1º Página de descripción 
 	2º Javascript avanzado (Que?)
 	3º Expresiones regulares en PHP (formulario insertaterminal, ahi hay una para la resolución de pantalla)
 	4º Facilidad de navegación (no hagamos una pagina por la que perderse sea lo común, enseñarsela a un familiar o amigo para que pruebe)
@@ -36,4 +36,6 @@ Changelog:
 			luego mas!
 
 Trabajando en:
-	Poner bonita la página del insert
+	Poner bonita la página del insert, revisiones
+	
+	REORGANIZACIÓN MASIVA PARA REUTILIZACIÓN DE CÓDIGO MASIVAMENTE MASIVA

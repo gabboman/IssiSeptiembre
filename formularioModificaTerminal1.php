@@ -1,4 +1,4 @@
-<?php//1: seleccion del terminal. Actualmente es una simple copia del de buscar terminal
+<?php
 session_start();
 
 if (!isset($_SESSION['formulario'])) {
@@ -15,7 +15,7 @@ if (isset($_SESSION['errores']))
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>Consultar Terminal</title>
+		<title>Selección de terminal a modificar</title>
 		<link type="text/css" rel="stylesheet" href="css/estilo_formularioTerminal.css">
 		<script type= "text/javascript" language="JavaScript" src="js/validacionesTerminal.js"></script>
 	</head>
@@ -29,17 +29,17 @@ if (isset($_SESSION['errores']))
 			echo "</div>";
 		}
 		?>
-		<h1>Consultar Terminal</h1>
+		<h1>Selección de terminal</h1>
 		<div id="cabecera"></div>
 		<div id="div_formu">
 			<form id="formulario" name="formulario" onsubmit="return validar()" action="tratamientoConsultarTerminal.php" method="post">
 				<div id="div_marca">
 					<label id="label_marca" for="terminal">Marca</label>
-					<input id="marca" name="marca" type="text" value="<?php echo $formulario['marca']?>" />
+					<input id="marca" name="marca" type="text" required="required" value="<?php echo $formulario['marca']?>" />
 				</div>
 				<div id="div_modelo">
 					<label id="label_modelo" for="terminal">Modelo</label>
-					<input id="modelo" name="modelo" type="text" value="<?php echo $formulario['modelo']?>" />
+					<input id="modelo" name="modelo" type="text" required="required" value="<?php echo $formulario['modelo']?>" />
 				</div>
 				<div id="div_submit">
 					<input name="submit" id="submit" type="submit" class="submit" value="Enviar formulario" />
@@ -48,3 +48,4 @@ if (isset($_SESSION['errores']))
 		</div>
 	</body>
 </html>
+
