@@ -25,6 +25,7 @@ function validar($formulario) {
 		$errores[] = 'El campo <b>modelo</b> no puede ser vacío';
 
 	return $errores;
-*/
+
 }
+*/
 ?>
