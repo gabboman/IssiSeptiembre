@@ -1,21 +1,22 @@
 <?php
-require_once ("tratamientoConsultarTerminal.php");
 session_start();
 $formulario = $_SESSION["formulario"];
-/*
+require_once("funciones.php");
 if (isset($formulario)) {
 	$formulario["marca"] = $_REQUEST["marca"];
 	$formulario["modelo"] = $_REQUEST["modelo"];
 	$_SESSION["formulario"] = $formulario;
 } else
-	Header("Location:formularioConsultaTerminal.php");
+	Header("Location:formularioModificaTerminal1.php");
 
-$errores = validar($formulario);
+$errores = validarConsultaTerminal($formulario);
 
 if (count($errores) > 0) {
 	$_SESSION["errores"] = $errores;
-	Header("Location:formularioConsultaTerminal.php");
+	Header("Location:formularioModificaTerminal1.php");
 } else
-	Header("Location:ExitoConsultaTerminal.php");
-*/
-	?>
+	Header("Location:seleccionaTerminal.php");
+	
+
+	
+?>

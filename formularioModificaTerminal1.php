@@ -32,7 +32,7 @@ if (isset($_SESSION['errores']))
 		<h1>Selección de terminal</h1>
 		<div id="cabecera"></div>
 		<div id="div_formu">
-			<form id="formulario" name="formulario" onsubmit="return validar()" action="tratamientoConsultarTerminal.php" method="post">
+			<form id="formulario" name="formulario" onsubmit="return validar()" action="tratamientoModificaTerminal1.php" method="post">
 				<div id="div_marca">
 					<label id="label_marca" for="terminal">Marca</label>
 					<input id="marca" name="marca" type="text" required="required" value="<?php echo $formulario['marca']?>" />
