@@ -34,7 +34,8 @@ Changelog:
 		Preparación de modificar terminal. Será un formulario en el que buscas un terminal, luego en la lista hay que editarla para añadir enlace a edición. luego una pagina de edicion.
 			Creado formularioModificaTerminal1: buscar un terminal //usar la misma funcion que el de validación de busqueda!
 			luego mas!
-
+	24/7
+		Cambios de código para que sea algo mas reutilizable: sacar funciones a otro archivo php
 Trabajando en:
 	Poner bonita la página del insert, revisiones
 	

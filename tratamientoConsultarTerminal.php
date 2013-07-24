@@ -1,7 +1,7 @@
 <?php
 session_start();
 $formulario = $_SESSION["formulario"];
-
+require_once("funciones.php");
 if (isset($formulario)) {
 	$formulario["marca"] = $_REQUEST["marca"];
 	$formulario["modelo"] = $_REQUEST["modelo"];
@@ -9,14 +9,14 @@ if (isset($formulario)) {
 } else
 	Header("Location:formularioConsultaTerminal.php");
 
-$errores = validar($formulario);
+$errores = validarConsultaTerminal($formulario);
 
 if (count($errores) > 0) {
 	$_SESSION["errores"] = $errores;
 	Header("Location:formularioConsultaTerminal.php");
 } else
 	Header("Location:ExitoConsultaTerminal.php");
-
+/* Codigo ahora en funciones.php
 function validar($formulario) {
 
 	if (!(isset($formulario['marca']) && strlen($formulario['marca']) > 0))
@@ -25,6 +25,6 @@ function validar($formulario) {
 		$errores[] = 'El campo <b>modelo</b> no puede ser vacío';
 
 	return $errores;
-
+*/
 }
 ?>

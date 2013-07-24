@@ -1,22 +1,21 @@
 <?php
 session_start();
 $formulario = $_SESSION["formulario"];
-
+require_once("funciones.php");
 if (isset($formulario)) {
-	$formulario["tarifa"] = $_REQUEST["tarifa"];
 	$formulario["operador"] = $_REQUEST["operador"];
 	$_SESSION["formulario"] = $formulario;
 } else
 	Header("Location:formularioConsultaTarifa.php");
 
-$errores = validar($formulario);
+$errores = validarConsultaTarifa($formulario);
 
 if (count($errores) > 0) {
 	$_SESSION["errores"] = $errores;
 	Header("Location:formularioConsultaTarifa.php");
 } else
 	Header("Location:ExitoConsultaTarifa.php");
-
+/*
 function validar($formulario) {
 
 	if (!(isset($formulario['tarifa']) && strlen($formulario['tarifa']) > 0))
@@ -27,4 +26,5 @@ function validar($formulario) {
 	return $errores;
 
 }
+*/
 ?>
