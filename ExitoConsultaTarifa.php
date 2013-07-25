@@ -4,7 +4,7 @@ $datos_formulario = $_SESSION["formulario"];
 
 session_destroy();
 
-require_once ("test.php");
+require_once ("funciones.php");
 
 $conexion = conectarBD();
 ?>

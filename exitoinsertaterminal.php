@@ -11,7 +11,7 @@ if (count($datos_formulario) < 10) {
 }
 
 
-require_once ("test.php");
+require_once ("funciones.php");
 
 $conexion = conectarBD();
 ?>
