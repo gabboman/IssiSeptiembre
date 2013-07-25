@@ -1,0 +1,51 @@
+body{
+	background-color : #EED5B7;
+	background:url(../IMG/movil.jpg);
+	background-repeat:no-repeat;
+}
+
+input,select{
+	border: 1px solid black;
+}
+h1{
+
+	text-align: center;
+}
+#div_cabecera{
+	
+	height:90px;
+	position: relative;
+	
+}
+#div_submit{
+	text-align : center;
+}
+#label_nombre,
+#label_apellidos,	
+#label_cif,
+#label_dni
+{
+  display: block;
+  float: left;
+  text-align: right;
+  width: 10em;
+  padding-right: 0.5em;
+  font-weight : bold;  
+}
+#label_letra{
+	 font-weight : bold;
+}
+
+input#nombre {
+  width: 6em;
+}
+
+input#apellidos {
+  width: 6em;
+}
+input#cif {
+  width: 6em;
+}
+input#dni {
+  width: 6em;
+}
