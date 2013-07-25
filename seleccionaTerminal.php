@@ -2,7 +2,7 @@
 session_start();
 $datos_formulario = $_SESSION["formulario"];
 
-session_destroy();
+
 
 require_once ("test.php");
 
@@ -24,8 +24,9 @@ $conexion = conectarBD();
 			$con=conectarBD();
 			$stmt=$con->query("SELECT * FROM TERMINAL WHERE MARCA LIKE '".$datos_formulario["marca"]."' AND MODELO LIKE '".$datos_formulario["modelo"]."'");
 			foreach ($stmt as $fila) {
-			echo "<h4>Terminal
+			echo "<h4>Terminal numero".$fila["IDTERMINAL"]."
 			<br>";
+			echo '<a href="Index.html">Inicio</a>';
 			echo "Modelo: ".$fila["MODELO"]."<br>";
 			echo "Marca: ".$fila["MARCA"]."<br>";
 			echo "Pantalla: ".$fila["PANTALLA"]."<br>";
