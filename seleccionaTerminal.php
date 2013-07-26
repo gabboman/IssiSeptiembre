@@ -24,11 +24,11 @@ $conexion = conectarBD();
 			$con=conectarBD();
 			$stmt=$con->query("SELECT * FROM TERMINAL WHERE MARCA LIKE '".$datos_formulario["marca"]."' AND MODELO LIKE '".$datos_formulario["modelo"]."'");
 			foreach ($stmt as $fila) {
-			echo "<h4>Terminal numero".$fila["IDTERMINAL"]."
-			<br>";
-			echo '<a href="Index.html">Inicio</a>';
-			echo "Modelo: ".$fila["MODELO"]."<br>";
-			echo "Marca: ".$fila["MARCA"]."<br>";
+			
+			echo '<form id="formulario" name="formulario" onsubmit="return validar()" action="DatosTerminal" method="post">';
+			echo "<h4>Terminal numero ".$fila["IDTERMINAL"]."<br>";
+			echo 'Marca: <input id="marca" name="marca" type="text" required="required" value="'.$fila["MARCA"].'" /><br>';
+			echo 'Modelo: <input id= "modelo" name="modelo" type="text" required="required" value="'.$fila["MODELO"].'/>"<br>';
 			echo "Pantalla: ".$fila["PANTALLA"]."<br>";
 			echo "Teclado: ".$fila["TECLADO"]."<br>";
 			echo "MemInterna: ".$fila["MEMINTERNA"]."<br>";
@@ -36,6 +36,7 @@ $conexion = conectarBD();
 			echo "CPU: ".$fila["CPU"]."<br>";
 			echo "GPU: ".$fila["GPU"]."<br>";
 			echo "</h4>";
+			echo '</form>';
 			}
 			?>
 			<div id="div_volver">
