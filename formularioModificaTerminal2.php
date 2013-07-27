@@ -14,28 +14,29 @@ $conexion = conectarBD();
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<title>Éxito en la búsqueda. Seleccione un terminal</title>
+		<title>Éxito</title>
 	</head>
-	<body>
+	<body>0
 		<div>
 
-			<h1>Lista de terminales que coinciden con su criterio de búsqueda para ser editados</h1>
+			<h1>Lista de terminales que coinciden con su criterio de búsqueda</h1>
 			<?php
 			$con=conectarBD();
 			$stmt=$con->query("SELECT * FROM TERMINAL WHERE MARCA LIKE '".$datos_formulario["marca"]."' AND MODELO LIKE '".$datos_formulario["modelo"]."'");
 			foreach ($stmt as $fila) {
+			
+			echo '<form id="formulario" name="formulario" onsubmit="return validar()" action="tratamientoModificaTerminal2.php" method="post">';
 			echo "<h4>Terminal numero ".$fila["IDTERMINAL"]."<br>";
-			echo 'Marca: '.$fila["MARCA"].'<br>';
-			echo 'Modelo: '.$fila["MODELO"].'<br>';
-			echo 'Pantalla: '.$fila["PANTALLA"].'<br>';
+			echo 'Marca: <input id="marca" name="marca" type="text" required="required" value="'.$fila["MARCA"].'" /><br>';
+			echo 'Modelo: <input id= "modelo" name="modelo" type="text" required="required" value="'.$fila["MODELO"].'"/><br>';
+			echo 'Pantalla: <input id= "pantalla" name="pantalla" type="text" required="required" value="'.$fila["PANTALLA"].'"/><br>';
 			echo "Teclado: ".$fila["TECLADO"]."<br>";
 			echo "MemInterna: ".$fila["MEMINTERNA"]."<br>";
 			echo "MemExterna: ".$fila["MEMEXTERNA"]."<br>";
 			echo "CPU: ".$fila["CPU"]."<br>";
 			echo "GPU: ".$fila["GPU"]."<br>";
-			echo '<a href="TratamientoSeleccionaTerminal.php?id='.$fila["IDTERMINAL"].'">Pulse aquí para editar el terminal mostrado arriba.</a>';
 			echo "</h4>";
-
+			echo '</form>';
 			}
 			?>
 			<div id="div_volver">

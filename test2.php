@@ -1,8 +1,8 @@
 <?php
 
-if (4>3){
-	echo 'test';
-}
+echo $_GET['idelem'];
 
-echo 'test2';
+
+
+
 ?>
