@@ -6,7 +6,7 @@ $datos_formulario = $_SESSION["formulario"];
 
 require_once ("funciones.php");
 
-$conexion = conectarBD();
+
 ?>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -16,13 +16,13 @@ $conexion = conectarBD();
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<title>Éxito</title>
 	</head>
-	<body>0
+	<body>
 		<div>
 
 			<h1>Lista de terminales que coinciden con su criterio de búsqueda</h1>
 			<?php
 			$con=conectarBD();
-			$stmt=$con->query("SELECT * FROM TERMINAL WHERE MARCA LIKE '".$datos_formulario["marca"]."' AND MODELO LIKE '".$datos_formulario["modelo"]."'");
+			$stmt=$con->query("SELECT * FROM TERMINAL WHERE IDTERMINAL LIKE '".$$datos_formulario['idelem']."'");
 			foreach ($stmt as $fila) {
 			
 			echo '<form id="formulario" name="formulario" onsubmit="return validar()" action="tratamientoModificaTerminal2.php" method="post">';

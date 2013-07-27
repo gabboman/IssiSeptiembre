@@ -73,6 +73,14 @@ function validarInsertaTerminal($formulario) {
 }
 
 
+ function validarSelecciontaTerminal($formulario){
+	if ($formulario["idterminal"]<0){
+	$errores[]='Algo raro ha pasado, ha tocado usted algo donde no debía? Contacte con un administrador dandole este error: ERROR: ID NEGATIVA';
+	}
+ }
+
+
+
 
 
 

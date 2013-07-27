@@ -33,7 +33,7 @@ $conexion = conectarBD();
 			echo "MemExterna: ".$fila["MEMEXTERNA"]."<br>";
 			echo "CPU: ".$fila["CPU"]."<br>";
 			echo "GPU: ".$fila["GPU"]."<br>";
-			echo '<a href="TratamientoSeleccionaTerminal.php?id='.$fila["IDTERMINAL"].'">Pulse aquí para editar el terminal mostrado arriba.</a>';
+			echo '<a href="TratamientoSeleccionaTerminal.php?idterminal='.$fila["IDTERMINAL"].'">Pulse aquí para editar el terminal mostrado arriba.</a>';
 			echo "</h4>";
 
 			}
