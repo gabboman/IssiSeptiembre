@@ -34,6 +34,8 @@ $conexion = conectarBD();
 			echo "MemExterna: ".$fila["MEMEXTERNA"]."<br>";
 			echo "CPU: ".$fila["CPU"]."<br>";
 			echo "GPU: ".$fila["GPU"]."<br>";
+			echo "Calidad de la cámara: ".$fila["CAMARA"]."<br>";
+			echo "Cantidad disponible: ".$fila["CANTIDAD"]."<br>";
 			echo "</h4>";
 			}
 			?>
