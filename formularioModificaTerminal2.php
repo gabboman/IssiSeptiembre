@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+
 $datos_formulario = $_SESSION["formulario"];
 
 
@@ -17,21 +19,31 @@ require_once ("funciones.php");
 		<title>Éxito</title>
 	</head>
 	<body>
+		<?php
+		if (isset($errores) && count($errores) > 0) {
+			echo "<div id=\"div_errores\" class=\"error\">";
+			foreach ($errores as $error) {
+				echo $error . "<br/>";
+			}
+			echo "</div>";
+		}
+		?>
 		<div>
 
 			<h1>Lista de terminales que coinciden con su criterio de búsqueda</h1>
 			<?php
+			$consulta="SELECT * FROM TERMINAL WHERE IDTERMINAL = ".$datos_formulario['idterminal'];
 			$con=conectarBD();
-			$stmt=$con->query("SELECT * FROM TERMINAL WHERE IDTERMINAL LIKE '".$$datos_formulario['idelem']."'");
+			$stmt=$con->query($consulta);
 			foreach ($stmt as $fila) {
 			
-			echo '<form id="formulario" name="formulario" onsubmit="return validar()" action="tratamientoModificaTerminal2.php" method="post">';
+			echo '<form id="formulario" name="formulario"  action="tratamientoModificaTerminal2.php" method="post">';
 			echo "<h4>Terminal numero ".$fila["IDTERMINAL"]."<br>";
 			echo 'Marca: <input id="marca" name="marca" type="text" required="required" value="'.$fila["MARCA"].'" /><br>';
 			echo 'Modelo: <input id= "modelo" name="modelo" type="text" required="required" value="'.$fila["MODELO"].'"/><br>';
 			echo 'Pantalla: <input id= "pantalla" name="pantalla" type="text" required="required" value="'.$fila["PANTALLA"].'"/><br>';
-			echo "Teclado: ".$fila["TECLADO"]."<br>";
-			echo "MemInterna: ".$fila["MEMINTERNA"]."<br>";
+			echo 'Teclado: <input id="teclado" name="teclado" type="text" required="required" value="'.$fila["TECLADO"].'"/><br>';
+			echo 'MemInterna: <input id="MemInterna"'.$fila["MEMINTERNA"].'<br>';
 			echo "MemExterna: ".$fila["MEMEXTERNA"]."<br>";
 			echo "CPU: ".$fila["CPU"]."<br>";
 			echo "GPU: ".$fila["GPU"]."<br>";

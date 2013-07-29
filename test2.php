@@ -1,6 +1,6 @@
 <?php
-
-echo $_GET['idelem'];
+require_once("funciones.php");
+generaformulario();
 
 
 
