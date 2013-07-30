@@ -17,4 +17,4 @@ if (count($errores) > 0) {
 	Header("Location:formularioModificaTerminal2.php");
 	
 
-	
+?>

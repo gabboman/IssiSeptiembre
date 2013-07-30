@@ -3,16 +3,18 @@
 session_start();
 require_once("funciones.php");
 if (!isset($_SESSION['formulario'])) {
-	$formulario['marca'] = "HTC";
-	$formulario['modelo'] = "Galaxy S3";
-	$formulario['pantalla']='500x200';
-	$formulario['teclado']='QWERTY';
-	$formulario['memoriaExterna']='512';
-	$formulario['meminterna']='256';
-	$formulario['gpu']='adreno 24';
-	$formulario['cpu']='500';
-	$formulario['calidadcamara']='9';
-	$formulario['cantidad']='5';
+
+
+	$formulario["marca"] = "HTC";
+	$formulario["modelo"] = "Galaxy S3";
+	$formulario["pantalla"]='500x200';
+	$formulario["teclado"]='QWERTY';
+	$formulario["memoriaExterna"]='512';
+	$formulario["meminterna"]='256';
+	$formulario["gpu"]='adreno 24';
+	$formulario["cpu"]='500';
+	$formulario["calidadcamara"]='9';
+	$formulario["cantidad"]='5';
 	$_SESSION['formulario'] = $formulario;
 } else
 	$formulario = $_SESSION['formulario'];
@@ -42,7 +44,7 @@ if (isset($_SESSION['errores']))
 		<div id="cabecera"></div>
 		<div id="div_formu">
 			<?php
-			generaformularioInsertaTerminal('tratamientoInsertterminal',$formulario);
+			generaformularioInsertaTerminal('tratamientoInsertterminal.php',$formulario);
 			?>
 		</div>
 	</body>

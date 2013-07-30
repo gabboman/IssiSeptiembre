@@ -48,19 +48,8 @@ require_once ("funciones.php");
 			$datos["calidadcamara"]=$fila["CAMARA"];
 			$datos["cantidad"]=$fila["CANTIDAD"];
 			
-			generaformularioInsertaTerminal('test.php',$datos);
-			$fila["IDTERMINAL"]."<br>";
-		/*	echo 'Marca: <input id="marca" name="marca" type="text" required="required" value="'.$fila["MARCA"].'" /><br>';
-			echo 'Modelo: <input id= "modelo" name="modelo" type="text" required="required" value="'.$fila["MODELO"].'"/><br>';
-			echo 'Pantalla: <input id= "pantalla" name="pantalla" type="text" required="required" value="'.$fila["PANTALLA"].'"/><br>';
-			echo 'Teclado: <input id="teclado" name="teclado" type="text" required="required" value="'.$fila["TECLADO"].'"/><br>';
-			echo 'MemInterna: <input id="MemInterna" name="MemInterna type="number"'.$fila["MEMINTERNA"].'<br>';
-			echo "MemExterna: ".$fila["MEMEXTERNA"]."<br>";
-			echo "CPU: ".$fila["CPU"]."<br>";
-			echo "GPU: ".$fila["GPU"]."<br>";
-			echo "</h4>";
-			echo '</form>';
-			*/}
+			generaformularioInsertaTerminal('tratamientoModificaTerminal2.php',$datos);
+			}
 			?>
 			<div id="div_volver">
 				Pulse <a href="Terminales.php">aquí</a> para volver a Terminales.
