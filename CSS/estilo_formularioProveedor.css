@@ -17,6 +17,7 @@ h1{
 	position: relative;
 	
 }
+
 #div_submit{
 	text-align : center;
 }
@@ -39,9 +40,9 @@ h1{
 input#nombre {
   width: 6em;
 }
-
 input#apellidos {
-  width: 6em;
+  position:center;
+  width: 10em;
 }
 input#cif {
   width: 6em;

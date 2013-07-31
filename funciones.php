@@ -135,7 +135,11 @@ echo ' 			<form id="formulario" name="formulario" onsubmit="return validar()" ac
  }
 
 
-
+function validarSeleccionProveedor($formulario){
+	if ($formulario["dni"]<0){
+	$errores[]='Algo raro ha pasado, ha tocado usted algo donde no debía? Contacte con un administrador dandole este error: ERROR: DNI ERRONEO';
+	}
+ }
 
 
 ?>
