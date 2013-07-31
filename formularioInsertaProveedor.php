@@ -36,7 +36,7 @@ if (isset($_SESSION['errores']))
 		<h1>Añadir Proveedor</h1>
 		<div id="cabecera"></div>
 		<div id="div_formu">
-			<form id="formulario" name="formulario" onsubmit="return validar()" action="tratamientoInsertProveedor.php" method="post">
+			<form id="formulario" name="formulario"  action="tratamientoInsertProveedor.php" method="post">
 				<div id="div_nombre">
 					<label id="label_nombre" for="proveedor">Nombre</label>
 					<input id="nombre" name="nombre"  type="text" required="required" value="<?php echo $formulario['nombre']?>" />

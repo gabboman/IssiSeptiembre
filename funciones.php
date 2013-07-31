@@ -141,7 +141,7 @@ function validarSeleccionProveedor($formulario){
 	}
 }
 	
-function validarInsertaProveedor($formulario) {
+function validacionInsertaProveedor($formulario) {
 	foreach ($formulario as $clave => $valor){
 	if (!(isset($formulario[$clave]) && strlen($formulario[$clave]) > 0))
 		$errores[] = 'El campo <b>'.$clave.'</b> no puede estar vacío';	
