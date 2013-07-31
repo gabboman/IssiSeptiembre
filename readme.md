@@ -1,6 +1,6 @@
 CAMBIOS OBLIGATORIOS
 	1º Formulario Inserta Terminal, ahora es posible insertar datos en la tabla terminales. Se puede con javascript y html5. lo estoy intentando con html5//falta un poco de validacion HECHO!!
-	2º Formulario para poder modificar datos de la tabla X
+	2º Formulario para poder modificar datos de la tabla X HECHO
 	3º Formulario para poder borrar datos de la BD
 	4º Obteenr datos de base datos como tabla en hache te eme ele
 	5º Que los insert sean compatibles con los triggers que tenemos!

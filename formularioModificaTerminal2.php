@@ -48,7 +48,7 @@ require_once ("funciones.php");
 			$datos["calidadcamara"]=$fila["CAMARA"];
 			$datos["cantidad"]=$fila["CANTIDAD"];
 			
-			generaformularioInsertaTerminal('tratamientoModificaTerminal2.php',$datos);
+			generaformularioInsertaTerminal('tratamientoModificaTerminal2.php?idterminal='.$fila["IDTERMINAL"],$datos);
 			}
 			?>
 			<div id="div_volver">

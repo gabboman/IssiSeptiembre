@@ -3,6 +3,7 @@ session_start();
 $formulario = $_SESSION["formulario"];
 require_once("funciones.php");
 if (isset($formulario)) {
+	$formulario["idterminal"]=$_GET["idterminal"];
 	$formulario["marca"] = $_REQUEST["marca"];
 	$formulario["pantalla"] = $_REQUEST["pantalla"];
 	$formulario["modelo"] = $_REQUEST["modelo"];
