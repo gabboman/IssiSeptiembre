@@ -139,6 +139,14 @@ function validarSeleccionProveedor($formulario){
 	if ($formulario["dni"]<0){
 	$errores[]='Algo raro ha pasado, ha tocado usted algo donde no debía? Contacte con un administrador dandole este error: ERROR: DNI ERRONEO';
 	}
+	
+function validarInsertaTerminal($formulario) {
+	foreach ($formulario as $clave => $valor){
+	if (!(isset($formulario[$clave]) && strlen($formulario[$clave]) > 0))
+		$errores[] = 'El campo <b>'.$clave.'</b> no puede estar vacío';	
+    
+	}
+
  }
 
 
