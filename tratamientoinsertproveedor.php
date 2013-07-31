@@ -3,10 +3,10 @@ session_start();
 $formulario = $_SESSION["formulario"];
 require_once("funciones.php");
 if (!isset($_SESSION['formulario'])) {
-	$formulario['nombre'] = "Pepe";
-	$formulario['apellidos'] = "Amador Garcia";
-	$formulario['cif']='1256984';
-	$formulario['dni']='263587419A';
+	$formulario['nombre'] = $_REQUEST["nombre"];
+	$formulario['apellidos'] = $_REQUEST["apellidos"];;
+	$formulario['cif']=$_REQUEST["cif"];;
+	$formulario['dni']=$_REQUEST["dni"];
 	$_SESSION['formulario'] = $formulario;
 	
 } else
