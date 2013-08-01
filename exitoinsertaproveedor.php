@@ -30,10 +30,10 @@ $conexion = conectarBD();
 			<h1>Datos añadidos al servidor.</h1>
 			<?php
 			$con=conectarBD();			
-			$insert="INSERT into Proveedor 
+			$insert="INSERT into Proveedores 
 			(Cif,Nombre,Apellidos,DNI)
 			Values
-			 (PROVEEDORES.Nextval,'".$datos_formulario["nombre"]."','".$datos_formulario["apellidos"]."','".$datos_formulario["cif"]."','".$datos_formulario["dni"]."')";
+			 ('".$datos_formulario["Cif"]."','".$datos_formulario["Nombre"]."','".$datos_formulario["Apellidos"]."','".$datos_formulario["DNI"]."')";
 			
 
 			echo $insert;

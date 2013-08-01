@@ -398,10 +398,6 @@ CREATE SEQUENCE terminales--secuencia para poder definir la primary key . añadi
   Increment By 1
   CACHE 10;
 
-CREATE SEQUENCE proveedores
-  Start With 2
-  Increment By 1
-  CACHE 10;
 
 
 --script de prueba--
