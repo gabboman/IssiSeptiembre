@@ -31,9 +31,9 @@ $conexion = conectarBD();
 			<?php
 			$con=conectarBD();			
 			$insert="INSERT into Proveedores 
-			(Cif,Nombre,Apellidos,DNI)
+			(nombre,apellidos,dni,cif)
 			Values
-			 ('".$datos_formulario["Cif"]."','".$datos_formulario["Nombre"]."','".$datos_formulario["Apellidos"]."','".$datos_formulario["DNI"]."')";
+			 ('".$datos_formulario["nombre"]."','".$datos_formulario["apellidos"]."','".$datos_formulario["dni"]."','".$datos_formulario["cif"]."')";
 			
 
 			echo $insert;
