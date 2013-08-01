@@ -2,7 +2,7 @@
 session_start();
 $formulario = $_SESSION["formulario"];
 require_once("funciones.php");
-if (!isset($_SESSION['formulario'])) {
+if (isset($_SESSION["formulario"])) {
 	$formulario['nombre'] = $_REQUEST["nombre"];
 	$formulario['apellidos'] = $_REQUEST["apellidos"];;
 	$formulario['cif']=$_REQUEST["cif"];;

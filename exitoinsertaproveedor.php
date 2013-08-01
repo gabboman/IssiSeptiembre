@@ -1,18 +1,18 @@
 <?php
 session_start();
-$datos_formulario = $_SESSION['formulario'];
+$datos_formulario = $_SESSION["formulario"];
 //echo $datos_formulario["marca"];//Esta linea fue usada para probar que funcionaba el sacar datos del formulario anterior. Guardada para la proxima vez que reutilice este código :D
 session_destroy();
 
 //if (count($datos_formulario) < 10) {
 //	$errores='ERROR! alguno de los campos no ha sido rellenado, o has actualizado la página de exito.';//no se porque no consigo hacer que se muestre
 //	$_SESSION["errores"] = $errores;
-//	Header("Location:formularioInsertaTerminal.php");
+//	Header("Location:formularioInsertaProveedor.php");
 //}
 
 
 require_once ("funciones.php");
-x
+
 $conexion = conectarBD();
 ?>
 
