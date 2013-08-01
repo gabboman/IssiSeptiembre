@@ -33,7 +33,7 @@ $conexion = conectarBD();
 			$insert="INSERT into Proveedor 
 			(Cif,Nombre,Apellidos,DNI)
 			Values
-			 (PROVEEDORES.Nextval,'".$datos_formulario["nombre"]."','".$datos_formulario["apellidos"]."','".$datos_formulario["cif"]."','".$datos_formulario["dni"].")";
+			 (PROVEEDORES.Nextval,'".$datos_formulario["nombre"]."','".$datos_formulario["apellidos"]."','".$datos_formulario["cif"]."','".$datos_formulario["dni"]."')'";
 			
 
 			echo $insert;
