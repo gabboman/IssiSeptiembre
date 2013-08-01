@@ -148,7 +148,7 @@ function validacionInsertaProveedor($formulario) {
     
 	}
 
- }x
+ }
 
 
 ?>
