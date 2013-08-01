@@ -36,7 +36,7 @@ $conexion = conectarBD();
 			 (PROVEEDORES.Nextval,'".$datos_formulario["nombre"]."','".$datos_formulario["apellidos"]."','".$datos_formulario["cif"]."','".$datos_formulario["dni"].")";
 			
 
-			//echo $insert;
+			echo $insert;
 			//$insert= utf8_encode($insert);//Innecesario, pense que tenia un error por esto. Era por un maldito ; que sobraba. No hacia falta ponerlo en el insert! razones historicas XD
 			$stmt=$con->exec($insert);
 			//echo $stmt;//Esta linea mostraria el numero de filas afectadas. Lo dejo aqui, algun dia te servira para algo. a mi, a ti, o a alguien que venga a robarme el trabajo :D
