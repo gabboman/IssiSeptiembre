@@ -341,7 +341,7 @@ END;
 --secuencias--
 
 CREATE SEQUENCE secterminal--secuencia para poder definir la primary key . añadido antes del commit.
-  Start With 2
+  Start With 1
   Increment By 1
   CACHE 10;
 
@@ -414,57 +414,56 @@ CREATE SEQUENCE secoperadores
 insert into OPERADORES (IDOPERADOR, nombre) values (secoperadores.nextval,'yoigo');
 insert into OPERADORES (IDOPERADOR, nombre) values (secoperadores.nextval,'movistar');
 
-insert into CLIENTES (dni,telefonoMovil,email,cuentaBancaria,nombre,apellidos,direccion) values ('01024561J','654632178','felix@gmail.com','025821256854233695','Sara','Perez Pi�a','Calle el puerto , n� 4');
-insert into CLIENTES (dni,telefonoMovil,email,cuentaBancaria,nombre,apellidos,direccion) values ('78954231A','686592178','maria89@gmail.com','025821259658433695','Francisco','Castro Pinz�n','Calle el compas, n� 7');
+insert into CLIENTES (dni,telefonoMovil,email,cuentaBancaria,nombre,apellidos,direccion) values ('02034562J','654633278','felix@gmail.com','035832356854333695','Sara','Perez Pi�a','Calle el puerto , n� 4');
+insert into CLIENTES (dni,telefonoMovil,email,cuentaBancaria,nombre,apellidos,direccion) values ('78954332A','686593278','maria89@gmail.com','035832359658433695','Francisco','Castro Pinz�n','Calle el compas, n� 7');
 
-insert into TIENDA (IDTIENDA,nombre,ubicacion,telefono,email) values (sectienda.nextval,'Nomb0','C/A n�1','954673817','calleA@gmail.com');
-insert into TIENDA (IDTIENDA,nombre,ubicacion,telefono,email) values (sectienda.nextval,'Nomb1','Avenida Bn�2','975263718','calleB@gmail.com');
+insert into TIENDA (IDTIENDA,nombre,ubicacion,telefono,email) values (sectienda.nextval,'Nomb0','C/A n�2','954673827','calleA@gmail.com');
+insert into TIENDA (IDTIENDA,nombre,ubicacion,telefono,email) values (sectienda.nextval,'Nomb2','Avenida Bn�3','975363728','calleB@gmail.com');
 
 insert into PUESTOSTRABAJO (idpuesto,sueldo,funcion,nombre,tiposTrabajos) values (secpuestos.nextval,758.00,'revisiones','Manuel','tecnico');
-insert into PUESTOSTRABAJO (idpuesto,sueldo,funcion,nombre,tiposTrabajos) values (secpuestos.nextval,816.00,'administrativa','Rosa','asistente');
+insert into PUESTOSTRABAJO (idpuesto,sueldo,funcion,nombre,tiposTrabajos) values (secpuestos.nextval,826.00,'administrativa','Rosa','asistente');
 
-insert into PROVEEDORES (nombre,apellidos,dni,cif) values ('Carlos','P�rez D�az','30284314D','12345678A');
-insert into PROVEEDORES (nombre,apellidos,dni,cif) values ('David','�lvarez Castro','48852773G','34567890B');
+insert into PROVEEDORES (nombre,apellidos,dni,cif) values ('Carlos','P�rez D�az','30384324D','23345678A');
+insert into PROVEEDORES (nombre,apellidos,dni,cif) values ('David','�lvarez Castro','48853773G','34567890B');
 
-insert into TERMINAL (idterminal,marca,modelo,pantalla,teclado,memInterna,memExterna,gpu,cpu,camara,cantidad) values (secterminal.nextval,'samsung','GalaxyS3','480x800','tactil',512,4,'Adreno200',800,8,8);
-insert into TERMINAL (idterminal,marca,modelo,pantalla,teclado,memInterna,memExterna,gpu,cpu,camara,cantidad) values (secterminal.nextval,'sorny','XPERIAARCS','240x320','tactil',1024,8,'Adreno200',800,8,7);
+insert into TERMINAL (idterminal,marca,modelo,pantalla,teclado,memInterna,memExterna,gpu,cpu,camara,cantidad) values (secterminal.nextval,'samsung','GalaxyS3','480x800','tactil',523,4,'Adreno300',800,8,8);
+insert into TERMINAL (idterminal,marca,modelo,pantalla,teclado,memInterna,memExterna,gpu,cpu,camara,cantidad) values (secterminal.nextval,'sorny','XPERIAARCS','340x330','tactil',2034,8,'Adreno300',800,8,7);
 
-insert into PIEZASREPARACION (idpieza,nombre,cantidadMaterial,terminalAsociado) values (secpieza.nextval,'pantalla','2',1);
-insert into PIEZASREPARACION (idpieza,nombre,cantidadMaterial,terminalAsociado) values (secpieza.nextval,'teclado','2',2);
+insert into PIEZASREPARACION (idpieza,nombre,cantidadMaterial,terminalAsociado) values (secpieza.nextval,'pantalla','3',1);
+insert into PIEZASREPARACION (idpieza,nombre,cantidadMaterial,terminalAsociado) values (secpieza.nextval,'teclado','3',2);
 
 insert into TIPOSSOPORTES (IDSOPORTES,nombre) values (secsoporte.nextval,'JPG');
 insert into TIPOSSOPORTES (IDSOPORTES,nombre) values (secsoporte.nextval,'AVI');
 
-insert into TRABAJADORES (dni,IDTIENDA,idpuesto,telefono,horario,fechaContrato,nombre,apellidos,direccion) values ('6666667D',1,0,666666665,'10:00-14:00',to_date('2008/05/03 21:02:44', 'yyyy/mm/dd hh24:mi:ss'),'Lance','Hardwood','calle falsa 123');
-insert into TRABAJADORES (dni,IDTIENDA,idpuesto,telefono,horario,fechaContrato,nombre,apellidos,direccion) values ('6666668D',2,1,666666666,'9:00-12:00',to_date('2009/05/03 21:02:44', 'yyyy/mm/dd hh24:mi:ss'),'Ristro','Montoya','calle falsa 122');
+insert into TRABAJADORES (dni,IDTIENDA,idpuesto,telefono,horario,fechaContrato,nombre,apellidos,direccion) values ('6666667D',1,1,666666665,'20:00-24:00',to_date('2008/05/03 22:03:44', 'yyyy/mm/dd hh24:mi:ss'),'Lance','Hardwood','calle falsa 233');
+insert into TRABAJADORES (dni,IDTIENDA,idpuesto,telefono,horario,fechaContrato,nombre,apellidos,direccion) values ('6666668D',2,2,666666666,'9:00-23:00',to_date('2009/05/03 22:03:44', 'yyyy/mm/dd hh24:mi:ss'),'Ristro','Montoya','calle falsa 233');
 
 insert into TARIFAS (idtarifa,precioMinuto,consumoMinimo,cuotaBase,NMINUTOSGRATUITO,cuotaInternet,nombreTarifa,IDOPERADOR) values (sectarifa.nextval,6,5,0,0,0,'S',1);
-insert into TARIFAS (idtarifa,precioMinuto,consumoMinimo,cuotaBase,NMINUTOSGRATUITO,cuotaInternet,nombreTarifa,IDOPERADOR) values (sectarifa.nextval,5,1,6,0,0,'M',2);
+insert into TARIFAS (idtarifa,precioMinuto,consumoMinimo,cuotaBase,NMINUTOSGRATUITO,cuotaInternet,nombreTarifa,IDOPERADOR) values (sectarifa.nextval,5,2,6,0,0,'M',2);
 
-insert into CONTRATOCLIENTE (FECHAINICIO,FECHAFIN,NUMEROTELEFONO,IDCONTRATO,IDTARIFA,DNICLIENTE,DNITRABAJADOR,IDTERMINAL) values (to_date('2008/05/03 21:02:44', 'yyyy/mm/dd hh24:mi:ss'),to_date('2024/05/03 21:02:44', 'yyyy/mm/dd hh24:mi:ss'),955612233,1,1,'01024561J','6666667D',1);
-insert into CONTRATOCLIENTE (FECHAINICIO,FECHAFIN,NUMEROTELEFONO,IDCONTRATO,IDTARIFA,DNICLIENTE,DNITRABAJADOR,IDTERMINAL) values (to_date('2009/06/21 10:48:05', 'yyyy/mm/dd hh24:mi:ss'),to_date('2014/06/21 10:48:05', 'yyyy/mm/dd hh24:mi:ss'),666666666,2,2,'78954231A','6666668D',0);
+Insert Into Contratocliente (Fechainicio,Fechafin,Numerotelefono,Idcontrato,Idtarifa,Dnicliente,Dnitrabajador,Idterminal) Values (To_Date('2008/05/02 11:03:44', 'yyyy/mm/dd hh:mi:ss'),To_Date('2014/05/03 12:03:44', 'yyyy/mm/dd hh:mi:ss'),955623333,1,1,'02034562J','6666667D',1);
+insert into CONTRATOCLIENTE (FECHAINICIO,FECHAFIN,NUMEROTELEFONO,IDCONTRATO,IDTARIFA,DNICLIENTE,DNITRABAJADOR,IDTERMINAL) values (to_date('2009/06/22 20:48:05', 'yyyy/mm/dd hh24:mi:ss'),to_date('3014/06/02 10:48:05', 'yyyy/mm/dd hh:mi:ss'),666666666,2,2,'78954332A','6666668D',2);
 
-insert into FACTURASVENTATERMINAL(CODFACTVENTA,CODTRABAJADOR,CODCLIENTE) values(secfacventer.nextval,'6666667D','01024561J');
-insert into FACTURASVENTATERMINAL(CODFACTVENTA,CODTRABAJADOR,CODCLIENTE) values(secfacventer.nextval,'6666668D','78954231A');
+insert into FACTURASVENTATERMINAL(CODFACTVENTA,CODTRABAJADOR,CODCLIENTE) values(secfacventer.nextval,'6666667D','02034562J');
+insert into FACTURASVENTATERMINAL(CODFACTVENTA,CODTRABAJADOR,CODCLIENTE) values(secfacventer.nextval,'6666668D','78954332A');
 
-insert into FACTURASCOMPRA(CODFACTCOMPRA,CODPROVEEDOR,CODTRABAJADOR) values(secfaccomter.nextval,'12345678A','6666667D');
-insert into FACTURASCOMPRA(CODFACTCOMPRA,CODPROVEEDOR,CODTRABAJADOR) values(secfaccomter.nextval,'12345678A','6666668D');
+insert into FACTURASCOMPRA(CODFACTCOMPRA,CODPROVEEDOR,CODTRABAJADOR) values(secfaccomter.nextval,'23345678A','6666667D');
+insert into FACTURASCOMPRA(CODFACTCOMPRA,CODPROVEEDOR,CODTRABAJADOR) values(secfaccomter.nextval,'23345678A','6666668D');
 
 insert into LINEAFACTURAVENTA(CONCEPTO,PRECIO,IDFACTURAVENTA,IDTERMINAL,IDLINEAFACTURAVENTA) values('Compra de gs3',500,1,1,1);
 insert into LINEAFACTURAVENTA(CONCEPTO,PRECIO,IDFACTURAVENTA,IDTERMINAL,IDLINEAFACTURAVENTA) values('Compra de htc One',450,2,2,2);
 
-insert into LINEAFACTURACOMPRA(IDLINEAFACTURACOMPRA,CONCEPTO,PRECIOTOTAL,FECHA,IDFACTURACOMPRA,IDPIEZA,IDTERMINAL) values(seclinfaccomter.nextval,'Compra terminales',600,to_date('2008/05/03 21:02:44','yyyy/mm/dd hh24:mi:ss'),1,1,1);
-insert into LINEAFACTURACOMPRA(IDLINEAFACTURACOMPRA,CONCEPTO,PRECIOTOTAL,FECHA,IDFACTURACOMPRA,IDPIEZA,IDTERMINAL) values(seclinfaccomter.nextval,'Compra terminales',800,to_date('2009/06/21 10:48:05','yyyy/mm/dd hh24:mi:ss'),2,2,2);
+insert into LINEAFACTURACOMPRA(IDLINEAFACTURACOMPRA,CONCEPTO,PRECIOTOTAL,FECHA,IDFACTURACOMPRA,IDPIEZA,IDTERMINAL) values(seclinfaccomter.nextval,'Compra terminales',600,to_date('2008/05/03 12:03:44','yyyy/mm/dd hh:mi:ss'),1,1,1);
+insert into LINEAFACTURACOMPRA(IDLINEAFACTURACOMPRA,CONCEPTO,PRECIOTOTAL,FECHA,IDFACTURACOMPRA,IDPIEZA,IDTERMINAL) values(seclinfaccomter.nextval,'Compra terminales',800,to_date('2009/06/22 10:48:05','yyyy/mm/dd hh:mi:ss'),2,2,2);
 
-insert into REPARACIONES(IDREPARACION,FECHAENTRADA,FECHASALIDA,IDTERMINAL,REPARACIONESREALIZADAS,IDLINEAFACTURACOMP,IDFACTURACOMPRA) values(secrep.nextval,to_date('2008/05/03 21:02:44', 'yyyy/mm/dd hh24:mi:ss'),to_date('2008/05/28 10:00:00','yyyy/mm/dd hh24:mi:ss'),1,'Cambio de la pantalla',1,1);
-insert into REPARACIONES(IDREPARACION,FECHAENTRADA,FECHASALIDA,IDTERMINAL,REPARACIONESREALIZADAS,IDLINEAFACTURACOMP,IDFACTURACOMPRA) values(secrep.nextval,to_date('2013/06/12 14:35:00', 'yyyy/mm/dd hh24:mi:ss'),to_date('2013/07/12 18:00:00','yyyy/mm/dd hh24:mi:ss'),2,'Cambio del teclado',2,2);
+insert into REPARACIONES(IDREPARACION,FECHAENTRADA,FECHASALIDA,IDTERMINAL,REPARACIONESREALIZADAS,IDLINEAFACTURACOMP,IDFACTURACOMPRA) values(secrep.nextval,to_date('2008/05/03 11:03:44', 'yyyy/mm/dd hh:mi:ss'),to_date('2008/05/9 2:00:00','yyyy/mm/dd hh:mi:ss'),1,'Cambio de la pantalla',1,1);
+insert into REPARACIONES(IDREPARACION,FECHAENTRADA,FECHASALIDA,IDTERMINAL,REPARACIONESREALIZADAS,IDLINEAFACTURACOMP,IDFACTURACOMPRA) values(secrep.nextval,to_date('2013/06/23 4:35:00', 'yyyy/mm/dd hh:mi:ss'),to_date('2013/07/23 1:00:00','yyyy/mm/dd hh:mi:ss'),2,'Cambio del teclado',2,2);
 
-insert into MANTENIMIENTO(IDREPARACION,IDPIEZA) values(secman.nextval,1);
-insert into MANTENIMIENTO(IDREPARACION,IDPIEZA) values(secman.nextval,2);
+insert into MANTENIMIENTO(IDREPARACION,IDPIEZA) values(secmant.nextval,1);
+insert into MANTENIMIENTO(IDREPARACION,IDPIEZA) values(secmant.nextval,2);
 
 insert into SOPORTE(IDTERMINAL,IDTIPOSOPORTE) values(secsop.nextval,1);
 insert into SOPORTE(IDTERMINAL,IDTIPOSOPORTE) values(secsop.nextval,2);
-
 
 
 
