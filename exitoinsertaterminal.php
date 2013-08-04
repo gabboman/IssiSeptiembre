@@ -33,7 +33,7 @@ $conexion = conectarBD();
 			$insert="INSERT into TERMINAL 
 			(Idterminal,Marca,Modelo,Pantalla,Teclado,Meminterna,Memexterna,Gpu,Cpu,Camara,Cantidad)
 			Values
-			 (Terminales.Nextval,'".$datos_formulario["marca"]."','".$datos_formulario["modelo"]."','".$datos_formulario["pantalla"]."','".$datos_formulario["teclado"]."',".$datos_formulario["meminterna"].",".$datos_formulario["memoriaExterna"].",'".$datos_formulario["gpu"]."',".$datos_formulario["cpu"].",".$datos_formulario["calidadcamara"].",".$datos_formulario["cantidad"].")";
+			 (secterminal.Nextval,'".$datos_formulario["marca"]."','".$datos_formulario["modelo"]."','".$datos_formulario["pantalla"]."','".$datos_formulario["teclado"]."',".$datos_formulario["meminterna"].",".$datos_formulario["memoriaExterna"].",'".$datos_formulario["gpu"]."',".$datos_formulario["cpu"].",".$datos_formulario["calidadcamara"].",".$datos_formulario["cantidad"].")";
 			
 
 			//echo $insert;
