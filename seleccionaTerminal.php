@@ -25,14 +25,7 @@ $conexion = conectarBD();
 			$stmt=$con->query("SELECT * FROM TERMINAL WHERE MARCA LIKE '".$datos_formulario["marca"]."' AND MODELO LIKE '".$datos_formulario["modelo"]."'");
 			foreach ($stmt as $fila) {
 			echo "<h4>Terminal numero ".$fila["IDTERMINAL"]."<br>";
-			echo 'Marca: '.$fila["MARCA"].'<br>';
-			echo 'Modelo: '.$fila["MODELO"].'<br>';
-			echo 'Pantalla: '.$fila["PANTALLA"].'<br>';
-			echo "Teclado: ".$fila["TECLADO"]."<br>";
-			echo "MemInterna: ".$fila["MEMINTERNA"]."<br>";
-			echo "MemExterna: ".$fila["MEMEXTERNA"]."<br>";
-			echo "CPU: ".$fila["CPU"]."<br>";
-			echo "GPU: ".$fila["GPU"]."<br>";
+			mostrarTerminal($fila);
 			echo '<a href="TratamientoSeleccionaTerminal.php?idterminal='.$fila["IDTERMINAL"].'">Pulse aquí para editar el terminal mostrado arriba.</a>';
 			echo "</h4>";
 

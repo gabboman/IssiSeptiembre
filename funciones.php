@@ -150,5 +150,47 @@ function validacionInsertaProveedor($formulario) {
 
  }
 
+ 
+ 
+ function mostrarTerminal($term){
+ 
+			echo "Modelo: ".$term["MODELO"]."<br>";
+			echo "Marca: ".$term["MARCA"]."<br>";
+			echo "Pantalla: ".$term["PANTALLA"]."<br>";
+			echo "Teclado: ".$term["TECLADO"]."<br>";
+			echo "MemInterna: ".$term["MEMINTERNA"]."<br>";
+			echo "MemExterna: ".$term["MEMEXTERNA"]."<br>";
+			echo "CPU: ".$term["CPU"]."<br>";
+			echo "GPU: ".$term["GPU"]."<br>";
+			echo "Calidad de la cámara: ".$term["CAMARA"]."<br>";
+			echo "Cantidad disponible: ".$term["CANTIDAD"]."<br>";
+ 
+ }
+ 
+ 
+ 
+ 
+ function error($numero,$texto){
+
+	$ddf = fopen('logs/error.log','a');// ruta al archivo, append (poner al final)
+	fwrite($ddf,"[".date("r")."] Error $numero: $texto\r\n");
+	fclose($ddf);
+}
+
+
+
+function consultabd($consulta,$con){
+$fila='NULL';
+try{
+	$stmt = $con -> prepare($consulta);
+	$stmt -> execute();
+	$fila = $stmt->fetch(PDO::FETCH_ASSOC);
+}catch(PDOException $e){
+		error(20,"Error realizando el siguiente comando sql: ".$consulta);
+		//header('Location: error.php');
+}
+return $fila;
+}
+
 
 ?>

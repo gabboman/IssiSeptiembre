@@ -1,6 +1,8 @@
 <?php
 require_once("funciones.php");
 
+ 
+echo consultabd("",conectarBD());
 
-echo 'Test2.php, pruebas aqui';
+ 
 ?>

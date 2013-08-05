@@ -1,7 +1,7 @@
 <?php
 
 
-require_once ("test.php");
+require_once ("funciones.php");
 
 ?>
 
@@ -19,16 +19,8 @@ require_once ("test.php");
 			$con=conectarBD();
 			$stmt=$con->query("SELECT * FROM TERMINAL");
 			foreach ($stmt as $fila) {
-			echo "<h4>Terminal
-			<br>";
-			echo "Modelo: ".$fila["MODELO"]."<br>";
-			echo "Marca: ".$fila["MARCA"]."<br>";
-			echo "Pantalla: ".$fila["PANTALLA"]."<br>";
-			echo "Teclado: ".$fila["TECLADO"]."<br>";
-			echo "MemInterna: ".$fila["MEMINTERNA"]."<br>";
-			echo "MemExterna: ".$fila["MEMEXTERNA"]."<br>";
-			echo "CPU: ".$fila["CPU"]."<br>";
-			echo "GPU: ".$fila["GPU"]."<br>";
+			echo "<h4>Terminal<br>";
+			mostrarTerminal($fila);
 			echo "</h4>";
 			}
 			?>

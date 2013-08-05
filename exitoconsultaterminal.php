@@ -24,18 +24,8 @@ $conexion = conectarBD();
 			$con=conectarBD();
 			$stmt=$con->query("SELECT * FROM TERMINAL WHERE MARCA LIKE '".$datos_formulario["marca"]."' AND MODELO LIKE '".$datos_formulario["modelo"]."'");
 			foreach ($stmt as $fila) {
-			echo "<h4>Terminal
-			<br>";
-			echo "Modelo: ".$fila["MODELO"]."<br>";
-			echo "Marca: ".$fila["MARCA"]."<br>";
-			echo "Pantalla: ".$fila["PANTALLA"]."<br>";
-			echo "Teclado: ".$fila["TECLADO"]."<br>";
-			echo "MemInterna: ".$fila["MEMINTERNA"]."<br>";
-			echo "MemExterna: ".$fila["MEMEXTERNA"]."<br>";
-			echo "CPU: ".$fila["CPU"]."<br>";
-			echo "GPU: ".$fila["GPU"]."<br>";
-			echo "Calidad de la cámara: ".$fila["CAMARA"]."<br>";
-			echo "Cantidad disponible: ".$fila["CANTIDAD"]."<br>";
+			echo "<h4>Terminal<br>";
+			mostrarTerminal($fila);
 			echo "</h4>";
 			}
 			?>
