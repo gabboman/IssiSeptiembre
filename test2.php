@@ -1,8 +1,9 @@
 <?php
 require_once("funciones.php");
 
+ $con=conectarBD();
  
-echo consultabd("",conectarBD());
+$test =consultabd("SPATATAAAAASSSS",$con);
 
  
 ?>

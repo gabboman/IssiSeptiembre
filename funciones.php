@@ -12,8 +12,9 @@ try{
 $conexion = new PDO($host, $username, $password);
 $conexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 }catch(PDOException $e){
-echo "ERROR DE CONEXION:".$e->GetMessage();
-
+$fallo="ERROR DE CONEXION: ".$e->GetMessage();
+echo $fallo;
+error(0,$fallo);
 }
 
 return $conexion;
@@ -180,16 +181,16 @@ function validacionInsertaProveedor($formulario) {
 
 
 function consultabd($consulta,$con){
-$fila='NULL';
+$stmt='NULL';
 try{
-	$stmt = $con -> prepare($consulta);
-	$stmt -> execute();
-	$fila = $stmt->fetch(PDO::FETCH_ASSOC);
+			$stmt=$con->query($consulta);
 }catch(PDOException $e){
-		error(20,"Error realizando el siguiente comando sql: ".$consulta);
-		//header('Location: error.php');
+		$errores="Error realizando el siguiente comando sql: ".$consulta;
+		error(20,$errores);
+		$_SESSION["errores"] = $errores;
+		header('Location: error.php');
 }
-return $fila;
+return $stmt;
 }
 
 

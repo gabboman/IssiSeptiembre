@@ -1,0 +1,29 @@
+body {
+	font-family:'Times roman'; 
+	background:url(../IMG/error.jpg);
+	background-repeat:no-repeat;
+	display: block;
+	
+}
+
+#div_cabecera{
+	background:url(../IMG/MobileNation.png);
+	background-repeat:no-repeat;
+	height:180px;
+	position: relative;
+	left:150px;
+	float: center;
+}
+#div_lateral{
+	
+	position:relative;
+	bottom:107px;
+	width:150px;
+	height:800px;
+	
+}
+
+#contacto{
+	position:relative;
+	bottom:600px;
+}

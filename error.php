@@ -1,10 +1,8 @@
 <?php
 session_start();
-$excepcion = $_SESSION['excepcion'];
-if (isset($excepcion))
-	unset($_SESSION['excepcion']);
-else
-	header("Location:index.html");
+if (isset($_SESSION['errores']))
+	$errores = $_SESSION['errores'];
+
 ?>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
@@ -12,15 +10,25 @@ else
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>Error</title>
-		<link type="text/css" rel="stylesheet" href="css/estilo_formularioTerminal.css">
+		<link type="text/css" rel="stylesheet" href="css/estilo_error.css">
 	</head>
 	<body>
 		<p>
-			Ocurrió un problema durante el procesado de los datos. Pulse <a href="index.html">aquí</a> para volver.
+			Al parecer ha habido uno o varios problemas:
 		</p>
 		<?php
-
-		echo $excepcion;
+		if (isset($errores) && count($errores) > 0) {
+			echo "<div id=\"div_errores\" class=\"error\">";
+			foreach ($errores as $error) {
+				echo $error . "<br/>";
+			}
+			echo "</div>";
+		}
 		?>
+		<p>
+		Pulse <a href="index.html">aquí</a> para volver a la página principal.
+		</p>
+		
+		
 	</body>
 </ht

@@ -16,8 +16,8 @@ require_once ("funciones.php");
 	</head>
 	<body >
 			<?php
-			$con=conectarBD();
-			$stmt=$con->query("SELECT * FROM TERMINAL");
+			//$con=conectarBD();
+			$stmt=consultabd("SELECT * FROM TERMINAL",conectarBD());
 			foreach ($stmt as $fila) {
 			echo "<h4>Terminal<br>";
 			mostrarTerminal($fila);
