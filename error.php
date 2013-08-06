@@ -1,5 +1,7 @@
 <?php
+require_once("funciones.php");
 session_start();
+//$errores='';
 if (isset($_SESSION['errores']))
 	$errores = $_SESSION['errores'];
 
@@ -17,13 +19,7 @@ if (isset($_SESSION['errores']))
 			Al parecer ha habido uno o varios problemas:
 		</p>
 		<?php
-		if (isset($errores) && count($errores) > 0) {
-			echo "<div id=\"div_errores\" class=\"error\">";
-			foreach ($errores as $error) {
-				echo $error . "<br/>";
-			}
-			echo "</div>";
-		}
+		mostrarerrores($errores);
 		?>
 		<p>
 		Pulse <a href="index.html">aquí</a> para volver a la página principal.

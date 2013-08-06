@@ -185,12 +185,24 @@ $stmt='NULL';
 try{
 			$stmt=$con->query($consulta);
 }catch(PDOException $e){
-		$errores="Error realizando el siguiente comando sql: ".$consulta;
+		
+		$errores[]="Error realizando el siguiente comando sql: ".$consulta;
 		error(20,$errores);
-		$_SESSION["errores"] = $errores;
+		$_SESSION['errores'] = $errores;
 		header('Location: error.php');
 }
 return $stmt;
+}
+
+function mostrarerrores($errores){
+
+		if (isset($errores) && count($errores) > 0) {
+			echo "<div id=\"div_errores\" class=\"error\">";
+			foreach ($errores as $error) {
+				echo $error . "<br/>";
+			}
+			echo "</div>";
+		}
 }
 
 

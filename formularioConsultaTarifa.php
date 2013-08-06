@@ -21,13 +21,7 @@ if (isset($_SESSION['errores']))
 	</head>
 	<body>
 		<?php
-		if (isset($errores) && count($errores) > 0) {
-			echo "<div id=\"div_errores\" class=\"error\">";
-			foreach ($errores as $error) {
-				echo $error . "<br/>";
-			}
-			echo "</div>";
-		}
+		mostrarerrores($errores);
 		?>
 		<h1>Consultar Tarifas</h1>
 		<div id="cabecera"></div>
