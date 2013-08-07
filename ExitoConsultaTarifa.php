@@ -21,17 +21,18 @@ $conexion = conectarBD();
 			<?php
 				$con=conectarBD();
 				$con2=conectarBD();
-				$stmt2=$con2->query("SELECT * FROM OPERADORES WHERE IDOPERADOR LIKE '".$datos_formulario["operador"]."'");
+				$stmt2=consultabd("SELECT * FROM OPERADORES WHERE IDOPERADOR LIKE '".$datos_formulario["operador"]."'",$con);
 				//$temp="a";
 				foreach ($stmt2 as $fila2) {
 				$temp=$fila2["IDOPERADOR"];
 				
-				$stmt=$con->query("SELECT * FROM TARIFA WHERE IDOPERADOR LIKE '".$temp."'" );
+				$stmt=consultabd("SELECT * FROM TARIFA WHERE IDOPERADOR LIKE '".$temp."'",$con2 );
 				foreach ($stmt as $fila) {
 				echo "Nombre tarifa: ".$fila["PRECIOMINUTO"]."<br>";
 				}
 				}
 				$con=desconectar();
+				$con2=desconectar();
 			
 			
 			?>

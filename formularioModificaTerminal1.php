@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+require_once("funciones.php");
 if (!isset($_SESSION['formulario'])) {
 	$formulario['marca'] = "HTC";
 	$formulario['modelo'] = "Galaxy S3";

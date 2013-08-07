@@ -1,5 +1,5 @@
 <?php
-require_once ("test.php");
+require_once ("funciones.php");
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -14,12 +14,11 @@ require_once ("test.php");
 		
 		<?php
 			$con=conectarBD();
-			$stmt=$con->query("SELECT * FROM PROVEEDORES");
+			$stmt=consultabd("SELECT * FROM PROVEEDORES",$con);
 			foreach ($stmt as $fila) {
 			echo "<h4>Proveedor
 			<br>";
-			echo "Nombre: ".$fila["NOMBRE"]."<br>";
-			echo "Apellidos: ".$fila["APELLIDOS"]."<br>";
+			mostrarproveedor($fila);
 			
 			echo "</h4>";
 			}

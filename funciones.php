@@ -180,7 +180,7 @@ function validacionInsertaProveedor($formulario) {
 
 
 
-function consultabd($consulta,$con){
+function consultabd($consulta,$con){//hm... tambien sirve para hacer inserts! pues a remodelar!
 $stmt='NULL';
 try{
 			$stmt=$con->query($consulta);
@@ -200,5 +200,10 @@ function mostrarerrores($errores){
 		echo $error . "<br/>";
 	}
 	echo "</div>";
+}
+
+function mostrarproveedor($prov){
+			echo "Nombre: ".$prov["NOMBRE"]."<br>";
+			echo "Apellidos: ".$prov["APELLIDOS"]."<br>";
 }
 ?>

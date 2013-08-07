@@ -36,7 +36,7 @@ $conexion = conectarBD();
 				$datos_formulario["memoriaExterna"].", Gpu='".$datos_formulario["gpu"]."' , Cpu=".$datos_formulario["cpu"].", camara=".$datos_formulario["calidadcamara"]." , Cantidad=".$datos_formulario["cantidad"]."
 			WHERE Idterminal=".$datos_formulario["idterminal"];
 			
-			$stmt=$con->exec($update);
+			$stmt=consultabd($update,$con);
 						
 			?>
 			<div id="div_volver">

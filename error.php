@@ -5,6 +5,9 @@ session_start();
 if (isset($_SESSION['errores']))
 	$errores = $_SESSION['errores'];
 
+	
+	
+session_destroy();
 ?>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
