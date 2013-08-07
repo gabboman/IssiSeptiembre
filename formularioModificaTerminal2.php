@@ -20,7 +20,8 @@ require_once ("funciones.php");
 	</head>
 	<body>
 		<?php
-		mostrarerrores($errores);
+		if(isset($errores))
+			mostrarerrores($errores);
 		?>
 		<div>
 

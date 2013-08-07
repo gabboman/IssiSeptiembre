@@ -25,7 +25,8 @@ if (isset($_SESSION['errores']))
 	</head>
 	<body>
 		<?php
-		mostrarerrores($errores);
+		if(isset($errores))
+			mostrarerrores($errores);
 		?>
 		<h1>Añadir Proveedor</h1>
 		<div id="cabecera"></div>

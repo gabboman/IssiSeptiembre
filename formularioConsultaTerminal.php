@@ -1,4 +1,5 @@
 <?php
+require_once ("funciones.php");
 session_start();
 
 if (!isset($_SESSION['formulario'])) {
@@ -21,7 +22,8 @@ if (isset($_SESSION['errores']))
 	</head>
 	<body>
 		<?php
-		mostrarerrores($errores);
+		if(isset($errores))
+			mostrarerrores($errores);
 		?>
 		<h1>Consultar Terminal</h1>
 		<div id="cabecera"></div>

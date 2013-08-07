@@ -22,7 +22,7 @@ $conexion = conectarBD();
 			<h1>Lista de terminales que coinciden con su criterio de búsqueda</h1>
 			<?php
 			$con=conectarBD();
-			$stmt=$con->query("SELECT * FROM TERMINAL WHERE MARCA LIKE '".$datos_formulario["marca"]."' AND MODELO LIKE '".$datos_formulario["modelo"]."'");
+			$stmt=consultabd("SELECT * FROM TERMINAL WHERE MARCA LIKE '".$datos_formulario["marca"]."' AND MODELO LIKE '".$datos_formulario["modelo"]."'",$con);
 			foreach ($stmt as $fila) {
 			echo "<h4>Terminal<br>";
 			mostrarTerminal($fila);
