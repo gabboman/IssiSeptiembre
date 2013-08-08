@@ -36,14 +36,14 @@ $conexion = conectarBD();
 			 ('".$datos_formulario["nombre"]."','".$datos_formulario["apellidos"]."','".$datos_formulario["dni"]."','".$datos_formulario["cif"]."')";
 			
 
-			echo $insert;
+			//echo $insert;
 			//$insert= utf8_encode($insert);//Innecesario, pense que tenia un error por esto. Era por un maldito ; que sobraba. No hacia falta ponerlo en el insert! razones historicas XD
 			$stmt=consultabd($insert,$con);
 			//echo $stmt;//Esta linea mostraria el numero de filas afectadas. Lo dejo aqui, algun dia te servira para algo. a mi, a ti, o a alguien que venga a robarme el trabajo :D
 			
 			?>
 			<div id="div_volver">
-				Pulse <a href="Proveedor.php">aquí</a> para volver a Proveedor.
+				Pulse <a href="Proveedores.php">aquí</a> para volver a Proveedor.
 			</div>
 		</div>
 	</body>

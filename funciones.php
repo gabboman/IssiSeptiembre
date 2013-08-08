@@ -188,7 +188,7 @@ try{
 		
 		$errores[]="Error realizando el siguiente comando sql: ".$consulta;
 		error(20,$errores);
-		$_SESSION['errores'] = $errores;
+		$_SESSION['errores'] = $errores."           DETALLES: ".$e->GetMessage();
 		header('Location: error.php');
 }
 return $stmt;
