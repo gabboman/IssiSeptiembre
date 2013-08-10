@@ -4,8 +4,6 @@ session_start();
 //$errores='';
 if (isset($_SESSION['errores']))
 	$errores = $_SESSION['errores'];
-
-	
 	
 session_destroy();
 ?>

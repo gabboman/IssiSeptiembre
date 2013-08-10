@@ -174,7 +174,9 @@ function validacionInsertaProveedor($formulario) {
  function error($numero,$texto){
 
 	$ddf = fopen('logs/error.log','a');// ruta al archivo, append (poner al final)
-	fwrite($ddf,"[".date("r")."] Error $numero: $texto\r\n");
+	foreach($texto as $linea){
+	fwrite($ddf,"[".date("r")."] Error $numero: $linea\r\n");//MODIFICAR PARA PODER USAR ARRAYS EN TEXTO!
+	}
 	fclose($ddf);
 }
 
@@ -186,11 +188,12 @@ try{
 			$stmt=$con->query($consulta);
 }catch(PDOException $e){
 		
-		$errores[]="Error realizando el siguiente comando sql: ".$consulta;
+		$errores[]="Error realizando el siguiente comando sql: ".$consulta."\r\nDETALLES: ".$e->GetMessage();
 		error(20,$errores);
-		$_SESSION['errores'] = $errores."           DETALLES: ".$e->GetMessage();
+		$_SESSION['errores'] = $errores;
 		header('Location: error.php');
 }
+//$stmt=$con->query($consulta);
 return $stmt;
 }
 
