@@ -1,9 +1,10 @@
 <?php
 require_once("funciones.php");
 session_start();
-//$errores='';
+//$errores[]='';
 if (isset($_SESSION['errores']))
 	$errores = $_SESSION['errores'];
+	
 	
 session_destroy();
 ?>
@@ -28,4 +29,4 @@ session_destroy();
 		
 		
 	</body>
-</ht
+</html>

@@ -12,10 +12,10 @@ try{
 $conexion = new PDO($host, $username, $password);
 $conexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 }catch(PDOException $e){
-$fallo="ERROR DE CONEXION: ".$e->GetMessage();
+$fallo[]="ERROR DE CONEXION: ".$e->GetMessage();
 
 error(0,$fallo);
-$_SESSION['errores'] = $errores;
+$_SESSION['errores']= $fallo;
 header('Location: error.php');
 
 }

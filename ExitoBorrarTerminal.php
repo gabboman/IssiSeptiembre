@@ -19,10 +19,6 @@ require_once ("funciones.php");
 		<title>Éxito</title>
 	</head>
 	<body>
-		<?php
-		if(isset($errores))
-			mostrarerrores($errores);
-		?>
 		<div>
 
 			<h1>Lista de terminales que coinciden con su criterio de búsqueda</h1>
