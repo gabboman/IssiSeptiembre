@@ -30,7 +30,7 @@ $conexion = conectarBD();
 				echo $temp.'PATATAS<br>';
 				$stmt=consultabd("SELECT * FROM TARIFAS WHERE IDOPERADOR LIKE ".$temp,$con2 );
 				foreach ($stmt as $fila) {
-				echo "Nombre tarifa: ".$fila["PRECIOMINUTO"]."<br>";
+				echo "Nombre tarifa: ".$fila["NOMBRETARIFA"]."<br>";
 				}
 				}
 				$con=desconectar();

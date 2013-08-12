@@ -25,22 +25,10 @@ if (isset($_SESSION['errores']))
 			mostrarerrores($errores);
 		?>
 		<h1>Selección de terminal</h1>
-		<div id="cabecera"></div>
-		<div id="div_formu">
-			<form id="formulario" name="formulario" onsubmit="return validar()" action="tratamientoModificaTerminal1.php" method="post">
-				<div id="div_marca">
-					<label id="label_marca" for="terminal">Marca</label>
-					<input id="marca" name="marca" type="text" required="required" value="<?php echo $formulario['marca']?>" />
-				</div>
-				<div id="div_modelo">
-					<label id="label_modelo" for="terminal">Modelo</label>
-					<input id="modelo" name="modelo" type="text" required="required" value="<?php echo $formulario['modelo']?>" />
-				</div>
-				<div id="div_submit">
-					<input name="submit" id="submit" type="submit" class="submit" value="Enviar formulario" />
-				</div>
-			</form>
-		</div>
+		<?php
+		generaformularioBusquedaTerminal("tratamientoModificaTerminal1.php",$formulario);
+		?>
+		
 	</body>
 </html>
 

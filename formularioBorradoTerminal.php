@@ -28,7 +28,7 @@ if (isset($_SESSION['errores']))
 		<h1>Consultar Terminal</h1>
 		<div id="cabecera"></div>
 		<?php
-		generaformularioBusquedaTerminal("tratamientoConsultarTerminal.php",$formulario);
+		generaformularioBusquedaTerminal("tratamientoBorrarTerminal.php",$formulario);
 		?>
 	</body>
 </html>

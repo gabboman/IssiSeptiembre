@@ -13,8 +13,11 @@ $conexion = new PDO($host, $username, $password);
 $conexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 }catch(PDOException $e){
 $fallo="ERROR DE CONEXION: ".$e->GetMessage();
-echo $fallo;
+
 error(0,$fallo);
+$_SESSION['errores'] = $errores;
+header('Location: error.php');
+
 }
 
 return $conexion;
@@ -80,12 +83,27 @@ function validarInsertaTerminal($formulario) {
 	}
  }
 
-
+function generaformularioBusquedaTerminal($accion, $formulario){
+echo '		<div id="div_formu">
+			<form id="formulario" name="formulario"  action="'.$accion.'" method="post">
+				<div id="div_marca">
+					<label id="label_marca" for="terminal">Marca</label>
+					<input id="marca" name="marca" type="text" required="required" value="'.$formulario['marca'].'" />
+				</div>
+				<div id="div_modelo">
+					<label id="label_modelo" for="terminal">Modelo</label>
+					<input id="modelo" name="modelo" type="text" required="required" value="'.$formulario['modelo'].'" />
+				</div>
+				<div id="div_submit">
+					<input name="submit" id="submit" type="submit" class="submit" value="Enviar formulario" />
+				</div>
+			</form>';
+}
  
  function generaformularioInsertaTerminal($accion,$fuente){
  
  //funcion de pruebas, actualmente es algo que estoy pensando y esta muy verde
-echo ' 			<form id="formulario" name="formulario" onsubmit="return validar()" action="'.$accion.'" method="post">
+echo ' 			<form id="formulario" name="formulario" action="'.$accion.'" method="post">
 				<div id="div_marca">
 					<label id="label_marca" for="terminal">Marca</label>
 					<input id="marca" name="marca" required="required" type="text" value="'.$fuente["marca"].'" />
