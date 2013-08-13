@@ -36,8 +36,8 @@ if (isset($_SESSION['errores']))
 					<label id="label_nombre" for="proveedor">Nombre</label>
 					<input id="nombre" name="nombre"  type="text" required="required" value="<?php echo $formulario['nombre']?>" />
 				</div>
-				<div id="div_apellido">
-					<label id="label_apellido" for="proveedor">Apellidos</label>
+				<div id="div_apellidos">
+					<label id="label_apellidos" for="proveedor">Apellidos</label>
 					<input id="apellidos" name="apellidos" type="text required="required" value="<?php echo $formulario['apellidos']?>" />
 				</div>
 				<div id="div_cif">

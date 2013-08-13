@@ -8,7 +8,8 @@ input,select{
 	border: 1px solid black;
 }
 h1{
-
+	color:green;
+	font-size:60px;
 	text-align: center;
 }
 #div_cabecera{
@@ -32,6 +33,7 @@ h1{
   width: 10em;
   padding-right: 0.5em;
   font-weight : bold;  
+  font-size:20px;
 }
 #label_letra{
 	 font-weight : bold;
@@ -41,8 +43,7 @@ input#nombre {
   width: 6em;
 }
 input#apellidos {
-  position:center;
-  width: 10em;
+  width: 6em;
 }
 input#cif {
   width: 6em;
