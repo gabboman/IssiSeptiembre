@@ -1,7 +1,8 @@
 body{
 	background-color : #EED5B7;
-	background:url(../IMG/movil.jpg);
-	background-repeat:no-repeat;
+	background:url(../IMG/proveedores.gif);
+	background-position::hover;
+
 }
 
 input,select{
