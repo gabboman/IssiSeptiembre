@@ -15,12 +15,13 @@ $con=conectarBD();
   <?php
   
   $consulta='SELECT * FROM TERMINAL';
-  $terminales=consultabd($consulta,$con)
+  $terminales=consultabd($consulta,$con);
+  foreach ($terminales as $fila) {
 echo' <tr>
-    <td>Samsung</td>
+    <td>$fila["marca"]</td>
     <td>S3</td>
-  </tr>'
-  
+  </tr>';
+  }
   ?>
   <tr>
     <td>Asereje</td>
