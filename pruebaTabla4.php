@@ -17,10 +17,18 @@ $con=conectarBD();
   $consulta='SELECT * FROM TERMINAL';
   $terminales=consultabd($consulta,$con);
   foreach ($terminales as $fila) {
-echo' <tr>
+	echo '<tr>
     <td>'.$fila["MARCA"].'</td>
-    <td>S3</td>
-  </tr>';
+    <td>'.$fila["MODELO"].'</td>
+	<td>'.$fila["PANTALLA"].'</td>
+	<td>'.$fila["TECLADO"].'</td>
+	<td>'.$fila["MEMINTERNA"].'</td>
+	<td>'.$fila["MEMEXTERNA"].'</td>
+	<td>'.$fila["GPU"].'</td>
+	<td>'.$fila["CPU"].'</td>
+	<td>'.$fila["CAMARA"].'</td>
+	<td>'.$fila["CANTIDAD"].'</td>
+   </tr>';
   }
   ?>
   <tr>
