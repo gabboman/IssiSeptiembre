@@ -31,10 +31,7 @@ $con=conectarBD();
    </tr>';
   }
   ?>
-  <tr>
-    <td>Asereje</td>
-    <td>Ja de Je</td>
-  </tr>
+ 
 </table>
 
 </body>
