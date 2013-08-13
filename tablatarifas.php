@@ -4,6 +4,9 @@ require_once("funciones.php");
 $con=conectarBD();
 ?>
 <html>
+<head>
+<link type="text/css" rel="stylesheet" href="css/estilo_tarifas.css">
+</head>
 <body>
 
 <table border="1">

@@ -2,31 +2,20 @@ body {
 	font-family:'Times roman'; 
 	margin:0px;
 	background:url(../IMG/tarifas.jpg);
-	background-repeat:no-repeat;
+	background-position::hover;
 	
 }
-
-#div_cabecera{
-	background:url(../IMG/MobileNation.JPG);
-	background-repeat:no-repeat;
-	height:90px;
-	position: relative;
-	bottom: 90px;
+caption{
+font-size:40px;
+color:black;
 }
 
-#div_lateral{
-	
-	position:relative;
-	bottom:107px;
-	width:150px;
-	height:800px;
-	background:url(../IMG/lateral.jpg);
-	background-repeat:repeat-y;
-	
+th{
+font-size:30px;
+color:green;
 }
 
-#contacto{
-	position:relative;
-	bottom:-20px;
-	float: none;
+td{
+font-size:25px;
+color:blue;
 }
