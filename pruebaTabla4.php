@@ -12,10 +12,16 @@ $con=conectarBD();
     <th>Marca</th>
     <th>Modelo</th>
   </tr>
-  <tr>
+  <?php
+  
+  $consulta='SELECT * FROM TERMINAL';
+  $terminales=consultabd($consulta,$con)
+echo' <tr>
     <td>Samsung</td>
     <td>S3</td>
-  </tr>
+  </tr>'
+  
+  ?>
   <tr>
     <td>Asereje</td>
     <td>Ja de Je</td>

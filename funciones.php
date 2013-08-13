@@ -29,6 +29,24 @@ return null;
 }
 
 
+function consultabd($consulta,$con){//hm... tambien sirve para hacer inserts! pues a remodelar!
+$stmt='NULL';
+try{
+			$stmt=$con->query($consulta);
+}catch(PDOException $e){
+		
+		$errores[]="Error realizando el siguiente comando sql: ".$consulta."\r\nDETALLES: ".$e->GetMessage();
+		error(20,$errores);
+		$_SESSION['errores'] = $errores;
+		header('Location: error.php');
+}
+//$stmt=$con->query($consulta);
+return $stmt;
+}
+
+
+
+
 //verificación de formulariosg
 
 
@@ -196,23 +214,6 @@ function validacionInsertaProveedor($formulario) {
 	fwrite($ddf,"[".date("r")."] Error $numero: $linea\r\n");//MODIFICAR PARA PODER USAR ARRAYS EN TEXTO!
 	}
 	fclose($ddf);
-}
-
-
-
-function consultabd($consulta,$con){//hm... tambien sirve para hacer inserts! pues a remodelar!
-$stmt='NULL';
-try{
-			$stmt=$con->query($consulta);
-}catch(PDOException $e){
-		
-		$errores[]="Error realizando el siguiente comando sql: ".$consulta."\r\nDETALLES: ".$e->GetMessage();
-		error(20,$errores);
-		$_SESSION['errores'] = $errores;
-		header('Location: error.php');
-}
-//$stmt=$con->query($consulta);
-return $stmt;
 }
 
 function mostrarerrores($errores){
