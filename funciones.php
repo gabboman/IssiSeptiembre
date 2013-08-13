@@ -12,12 +12,11 @@ try{
 $conexion = new PDO($host, $username, $password);
 $conexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 }catch(PDOException $e){
-$fallo[]="ERROR DE CONEXION: ".$e->GetMessage();
-
-error(0,$fallo);
-$_SESSION['errores']= $fallo;
-header('Location: error.php');
-
+		
+		$errores[]="Error conectando a la base de datos: ".$consulta."\r\nDETALLES: ".$e->GetMessage();
+		error(0,$errores);
+		$_SESSION['errores'] = $errores;
+		header('Location: error.php');
 }
 
 return $conexion;
@@ -36,7 +35,7 @@ try{
 }catch(PDOException $e){
 		
 		$errores[]="Error realizando el siguiente comando sql: ".$consulta."\r\nDETALLES: ".$e->GetMessage();
-		error(20,$errores);
+		error(1,$errores);
 		$_SESSION['errores'] = $errores;
 		header('Location: error.php');
 }
