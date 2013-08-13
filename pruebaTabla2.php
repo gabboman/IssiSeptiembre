@@ -6,18 +6,16 @@
 </tr>
 
 <?php  
-  //$link = @mysql_connect('oci:name=localhost/XE', 'server',"password")
-	session_start();
-	require_once("funciones.php");
-	
-	//or die ("Error al conectar a la base de datos.");
-  //@mysql_select_db("ajpdsoft", $link)
-    //  or die ("Error al conectar a la base de datos.");
+  $con = mysql_connect("oci:dbname=localhost/XE","server","password");
+	if (!$con)
+	{
+		die('Could not connect: ' . mysql_error());
+	}
 
-  $query = "SELECT marca, modelo, pantalla, gpu " .
-      "FROM TERMINAL ";
+	$sql = "SELECT * FROM TERMINAL";
+	mysql_query($sql,$con);
 
-  $result = mysql_query($query);
+  $result = mysql_query($sql);
   $numero = 0;
   while($row = mysql_fetch_array($result))
   {
@@ -35,7 +33,7 @@
       "</b></font></td></tr>";
   
   //mysql_free_result($result);
-  //mysql_close($link);
+  mysql_close($con);
   
 ?>
 </table>
