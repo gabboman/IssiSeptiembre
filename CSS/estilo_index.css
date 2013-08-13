@@ -15,15 +15,16 @@ body {
 	float: center;
 }
 #div_lateral{
-	
+	color:orange;
 	position:relative;
 	bottom:107px;
 	width:150px;
 	height:800px;
-	
+	font-size:20px;
 }
 
 #contacto{
 	position:relative;
 	bottom:600px;
+	font-size:15px;
 }
