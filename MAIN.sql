@@ -429,8 +429,8 @@ insert into PROVEEDORES (nombre,apellidos,dni,cif) values ('David','�lvarez Ca
 insert into TERMINAL (idterminal,marca,modelo,pantalla,teclado,memInterna,memExterna,gpu,cpu,camara,cantidad) values (secterminal.nextval,'samsung','GalaxyS3','480x800','tactil',523,4,'Adreno300',800,8,8);
 insert into TERMINAL (idterminal,marca,modelo,pantalla,teclado,memInterna,memExterna,gpu,cpu,camara,cantidad) values (secterminal.nextval,'sorny','XPERIAARCS','340x330','tactil',2034,8,'Adreno300',800,8,7);
 
-insert into PIEZASREPARACION (idpieza,nombre,cantidadMaterial,terminalAsociado) values (secpieza.nextval,'pantalla','3',1);
-insert into PIEZASREPARACION (idpieza,nombre,cantidadMaterial,terminalAsociado) values (secpieza.nextval,'teclado','3',2);
+insert into PIEZASREPARACION (idpieza,nombre,cantidadMaterial,terminalAsociado) values (secpieza.nextval,'pantalla','6',1);
+insert into PIEZASREPARACION (idpieza,nombre,cantidadMaterial,terminalAsociado) values (secpieza.nextval,'teclado','8',2);
 
 insert into TIPOSSOPORTES (IDSOPORTES,nombre) values (secsoporte.nextval,'JPG');
 insert into TIPOSSOPORTES (IDSOPORTES,nombre) values (secsoporte.nextval,'AVI');
@@ -474,8 +474,8 @@ SET FECHAENTRADA=to_date('2009/05/03 21:02:44', 'yyyy/mm/dd hh24:mi:ss'),FECHASA
 
 UPDATE TERMINAL
 SET CANTIDAD=3
-WHERE IDTERMINAL=0;
+WHERE IDTERMINAL=1;
 
 UPDATE PIEZASREPARACION
 SET CANTIDADMATERIAL=3
-WHERE IDPIEZA = 0;
+WHERE IDPIEZA = 1;
