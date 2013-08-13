@@ -1,7 +1,7 @@
 body {
 	font-family:'Times romans'; 
 	margin:0px;
-	background:url(../IMG/telefono.jpg);
+	background:url(../IMG/fondo_contacto.jpg);
 	
 }
 
@@ -23,13 +23,19 @@ body {
 	bottom:107px;
 	width:150px;
 	height:800px;
-	
+	font-size:20px;
 }
 
 h1{
+color:red;
 font-size:80px;
 }
 
 h2{
-font-size:30px;
+color:green;
+font-size:50px;
 }
+
+h3{
+color:red;
+font-size:30px;
