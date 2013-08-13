@@ -5,74 +5,33 @@ body{
 	background-repeat:no-repeat;
 }
 
-input,select{
-	border: 1px solid black;
-}
 h1{
-
+	color:green;
 	text-align: center;
 }
-#div_cabecera{
-	
-	height:90px;
-	position: relative;
-	
-}
+
 #div_submit{
 	text-align : center;
 }
-#label_cantidad,
-#label_calidadcamara,	
+
 #label_modelo,
-#label_marca,
-#label_pantalla,
-#label_teclado,
-#label_meminterna,
-#label_memoriaExterna,
-#label_gpu,
-#label_cpu
+#label_marca
+
 {
   display: block;
   float: left;
   text-align: right;
   width: 10em;
   padding-right: 0.5em;
-  font-weight : bold;  
-}
-#label_letra{
-	 font-weight : bold;
+  font-weight : bold;
+  font-size:20px;
 }
 
+
 input#modelo {
-  width: 6em;
+  width: 10em;
 }
 
 input#marca {
-  width: 6em;
+  width: 10em;
 }
-input#pantalla {
-  width: 6em;
-}
-input#teclado {
-  width: 6em;
-}
-input#meminterna {
-  width: 3em;
-}
-input#memoriaExterna{
-  width: 3em;
-}
-input#cpu{
-  width: 3em;
-}
-input#gpu{
-  width: 6em;
-}
-
-input#calidadcamara{
-  width: 3em;
-}
-
-input#cantidad{
-  width: 3em;
- }
