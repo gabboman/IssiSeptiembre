@@ -18,7 +18,7 @@ $con=conectarBD();
   $terminales=consultabd($consulta,$con);
   foreach ($terminales as $fila) {
 echo' <tr>
-    <td>$fila["marca"]</td>
+    <td>'.$fila["MARCA"].'</td>
     <td>S3</td>
   </tr>';
   }
