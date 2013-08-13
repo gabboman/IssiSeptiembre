@@ -11,6 +11,14 @@ $con=conectarBD();
   <tr>
     <th>Marca</th>
     <th>Modelo</th>
+	<th>Pantalla</th>
+	<th>Teclado</th>
+	<th>MemInterna</th>
+	<th>MemExterna</th>
+	<th>GPU</th>
+	<th>CPU</th>
+	<th>Camara</th>
+	<th>Cantidad</th>
   </tr>
   <?php
   
