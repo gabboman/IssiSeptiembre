@@ -23,10 +23,15 @@ $con=conectarBD();
   $consulta='SELECT * FROM TARIFAS';
   $terminales=consultabd($consulta,$con);
   foreach ($terminales as $fila) {
+  	$con2=conectarBD();
+	$stmt2=$con2->query("SELECT * FROM OPERADORES WHERE IDOPERADOR LIKE '".$fila["IDOPERADOR"]."'");			
+  
 	echo '<tr>
-    <td>'.$fila["NOMBRETARIFA"].'</td>
-    <td>'.$fila["IDOPERADOR"].'</td>
-	<td>'.$fila["CUOTABASE"].'</td>
+    <td>'.$fila["NOMBRETARIFA"].'</td>';
+	foreach ($stmt2 as $fila2) {
+    echo '<td>'.$fila2["NOMBRE"].'</td>';
+	}
+	echo '<td>'.$fila["CUOTABASE"].'</td>
 	<td>'.$fila["PRECIOMINUTO"].'</td>
 	<td>'.$fila["CONSUMOMINIMO"].'</td>
 	<td>'.$fila["CUOTAINTERNET"].'</td>
