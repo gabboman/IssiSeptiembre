@@ -2,12 +2,12 @@
 require_once ("funciones.php");
 session_start();
 
-if (!isset($_SESSION['formulario'])) {
+if (!isset($_SESSION['formulario_borrado_terminal'])) {
 	$formulario['marca'] = "HTC";
 	$formulario['modelo'] = "Galaxy S3";
 	$_SESSION['formulario'] = $formulario;
 } else
-	$formulario = $_SESSION['formulario'];
+	$formulario = $_SESSION['formulario_borrado_terminal'];
 
 if (isset($_SESSION['errores']))
 	$errores = $_SESSION['errores'];

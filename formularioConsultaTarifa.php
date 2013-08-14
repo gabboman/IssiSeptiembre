@@ -1,12 +1,12 @@
 <?php
 session_start();
 require_once("funciones.php");
-if (!isset($_SESSION['formulario'])) {
+if (!isset($_SESSION['formulario_consulta_tarifa'])) {
 
 	$formulario['operador'] = "Movistar";
-	$_SESSION['formulario'] = $formulario;
+	$_SESSION['formulario_consulta_tarifa'] = $formulario;
 } else
-	$formulario = $_SESSION['formulario'];
+	$formulario = $_SESSION['formulario_consulta_tarifa'];
 
 if (isset($_SESSION['errores']))
 	$errores = $_SESSION['errores'];

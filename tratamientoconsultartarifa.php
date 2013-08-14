@@ -1,12 +1,12 @@
 <?php
 session_start();
-$formulario = $_SESSION["formulario"];
+//$formulario = $_SESSION["formulario"];
 require_once("funciones.php");
-if (isset($formulario)) {
+if (!isset($formulario)) {
 	$formulario["operador"] = $_REQUEST["operador"];
-	$_SESSION["formulario"] = $formulario;
+	$_SESSION["formulario_consulta_tarifa"] = $formulario;
 } else
-	Header("Location:formularioConsultaTarifa.php");
+	Header("Location:formularioConsulta.php");
 
 $errores = validarConsultaTarifa($formulario);
 
