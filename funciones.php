@@ -12,7 +12,8 @@ try{
 $conexion = new PDO($host, $username, $password);
 $conexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 }catch(PDOException $e){
-		
+		session_destroy();
+		session_start();
 		$errores[]="Error conectando a la base de datos: ".$consulta."\r\nDETALLES: ".$e->GetMessage();
 		error(0,$errores);
 		$_SESSION['errores'] = $errores;
@@ -33,7 +34,8 @@ $stmt='NULL';
 try{
 			$stmt=$con->query($consulta);
 }catch(PDOException $e){
-		
+		session_destroy();
+		session_start();
 		$errores[]="Error realizando el siguiente comando sql: ".$consulta."\r\nDETALLES: ".$e->GetMessage();
 		error(1,$errores);
 		$_SESSION['errores'] = $errores;
@@ -53,8 +55,12 @@ function validarConsultaTerminal($formulario) {
 
 	if (!(isset($formulario['marca']) && strlen($formulario['marca']) > 0))
 		$errores[] = 'El campo <b>Marca</b> no puede ser vacío';
+		$log='warning: revisar consultaterminal. envio formulario sin informacion de la marca. detalles del navegador del usuario: '.$_SERVER['HTTP_USER_AGENT'] . "\n\n";
+		error(3,$log);
 	if (!(isset($formulario['modelo']) && strlen($formulario['modelo']) > 0))
 		$errores[] = 'El campo <b>modelo</b> no puede ser vacío';
+		$log='warning: revisar consultaterminal. envio formulario sin informacion del modelo. detalles del navegador del usuario: '.$_SERVER['HTTP_USER_AGENT'] . "\n\n";
+		error(3,$log);
 
 	return $errores;
 
@@ -63,23 +69,29 @@ function validarConsultaTerminal($formulario) {
 function validarConsultaTarifa($formulario) {
 
 
-	if (!(isset($formulario['operador']) && strlen($formulario['operador']) > 0))
+	if (!(isset($formulario['operador']) && strlen($formulario['operador']) > 0)){
 		$errores[] = 'El campo <b>Operador</b> no puede estar vacío';
-	
+		$log='warning: revisar consultatarifa. envio formulario sin informacion del operador. detalles del navegador del usuario: '.$_SERVER['HTTP_USER_AGENT'] . "\n\n";
+		error(3,$log);}
 	return $errores;
 
 }
 
 function validarInsertaTerminal($formulario) {
 	foreach ($formulario as $clave => $valor){
-	if (!(isset($formulario[$clave]) && strlen($formulario[$clave]) > 0))
+	if (!(isset($formulario[$clave]) && strlen($formulario[$clave]) > 0)){
 		$errores[] = 'El campo <b>'.$clave.'</b> no puede estar vacío';	
+		$log='warning: revisar insertaterminal. envio formulario sin informacion valida de '.$clave.'. detalles del navegador del usuario: '.$_SERVER['HTTP_USER_AGENT'] . "\n\n";
+		error(3,$log);}
     
 	}
 	
 	
 	if (!(preg_match("/^[0-9]+x[0-9]+$/", $formulario["pantalla"]))) {
-    $errores[]='La resolucion de pantalla debe ser del formato NxM siendo N y M números enteros';
+		$errores[]='La resolucion de pantalla debe ser del formato NxM siendo N y M números enteros';
+		$log='warning: revisar insertaterminal. El formato de la pantalla no es válido!: '.$_SERVER['HTTP_USER_AGENT'] . "\n\n";
+		error(3,$log);
+	
 }
 
 	
@@ -97,6 +109,7 @@ function validarInsertaTerminal($formulario) {
  function validarSelecciontaTerminal($formulario){
 	if ($formulario["idterminal"]<0){
 	$errores[]='Algo raro ha pasado, ha tocado usted algo donde no debía? Contacte con un administrador dandole este error: ERROR: ID NEGATIVA';
+	
 	}
  }
 
@@ -171,17 +184,21 @@ echo ' 			<form id="formulario" name="formulario" action="'.$accion.'" method="p
  }
 
 
-function validarSeleccionProveedor($formulario){
+function validarSeleccionProveedor($formulario){//revisar esto....
 	if ($formulario["dni"]<0){
 	$errores[]='Algo raro ha pasado, ha tocado usted algo donde no debía? Contacte con un administrador dandole este error: ERROR: DNI ERRONEO';
+		$log='warning: revisar proveedorde la pantalla no es válido!: '.$_SERVER['HTTP_USER_AGENT'] . "\n\n";
+		error(3,$log);
 	}
 }
 	
 function validacionInsertaProveedor($formulario) {
 	foreach ($formulario as $clave => $valor){
-	if (!(isset($formulario[$clave]) && strlen($formulario[$clave]) > 0))
+	if (!(isset($formulario[$clave]) && strlen($formulario[$clave]) > 0)){
 		$errores[] = 'El campo <b>'.$clave.'</b> no puede estar vacío';	
-    
+		$log='warning: revisar insertaproveedor, el campo '.$clave.' esta vacio: '.$_SERVER['HTTP_USER_AGENT'] . "\n\n";
+		error(3,$log);
+	}
 	}
 
  }
