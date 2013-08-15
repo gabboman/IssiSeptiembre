@@ -6,7 +6,7 @@ if (!isset($_SESSION['formulario'])) {
 	$formulario['modelo'] = "Galaxy S3";
 	$_SESSION['formulario'] = $formulario;
 } else
-	$formulario = $_SESSION['formulario'];
+	$formulario = $_SESSION['modificaterminal'];
 
 if (isset($_SESSION['errores']))
 	$errores = $_SESSION['errores'];

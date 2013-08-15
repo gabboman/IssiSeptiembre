@@ -2,15 +2,15 @@
 
 session_start();
 
-if (!isset($_SESSION['formulario'])) {
+if (!isset($_SESSION['formulario_inserta_proveedor'])) {
 	$formulario['nombre'] = "Pepe";
 	$formulario['apellidos'] = "Amador Garcia";
 	$formulario['cif']='1256984';
 	$formulario['dni']='263587419A';
 	
-	$_SESSION['formulario'] = $formulario;
+	$_SESSION['formulario_inserta_proveedor'] = $formulario;
 } else
-	$formulario = $_SESSION['formulario'];
+	$formulario = $_SESSION['formulario_inserta_proveedor'];
 
 if (isset($_SESSION['errores']))
 	$errores = $_SESSION['errores'];

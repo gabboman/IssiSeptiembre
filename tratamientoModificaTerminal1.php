@@ -1,8 +1,8 @@
 <?php
 session_start();
-$formulario = $_SESSION["formulario"];
+//$formulario = $_SESSION["modificaterminal"];
 require_once("funciones.php");
-if (isset($formulario)) {
+if (!isset($formulario)) {
 	$formulario["marca"] = $_REQUEST["marca"];
 	$formulario["modelo"] = $_REQUEST["modelo"];
 	$_SESSION["formulario"] = $formulario;

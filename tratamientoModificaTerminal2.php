@@ -1,6 +1,6 @@
 <?php
 session_start();
-$formulario = $_SESSION["formulario"];
+$formulario = $_SESSION["modificaterminal"];
 require_once("funciones.php");
 if (isset($formulario)) {
 	$formulario["idterminal"]=$_GET["idterminal"];
@@ -14,7 +14,7 @@ if (isset($formulario)) {
 	$formulario["cpu"] = $_REQUEST["cpu"];
 	$formulario["calidadcamara"] = $_REQUEST["calidadcamara"];
 	$formulario["cantidad"] = $_REQUEST["cantidad"];
-	$_SESSION["formulario"] = $formulario;
+	$_SESSION["modificaterminal"] = $formulario;
 	
 	
 } else

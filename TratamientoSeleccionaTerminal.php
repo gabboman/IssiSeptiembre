@@ -1,10 +1,10 @@
 <?php
 session_start();
-$formulario = $_SESSION["formulario"];
+$formulario = $_SESSION["modificaterminal"];
 require_once("funciones.php");
-if (isset($formulario)) {
+if (isset($_GET["idterminal"])) {
 	$formulario["idterminal"] = $_GET["idterminal"];
-	$_SESSION["formulario"] = $formulario;
+	$_SESSION["modificaterminal"] = $formulario;
 } else
 	Header("Location:formularioSeleccionaTerminal1.php");
 

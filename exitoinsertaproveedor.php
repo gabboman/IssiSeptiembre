@@ -1,6 +1,6 @@
 <?php
 session_start();
-$datos_formulario = $_SESSION["formulario"];
+$datos_formulario = $_SESSION["formulario_inserta_proveedor"];
 //echo $datos_formulario["marca"];//Esta linea fue usada para probar que funcionaba el sacar datos del formulario anterior. Guardada para la proxima vez que reutilice este código :D
 session_destroy();
 

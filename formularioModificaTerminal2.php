@@ -2,7 +2,7 @@
 session_start();
 
 
-$datos_formulario = $_SESSION["formulario"];
+$datos_formulario = $_SESSION["modificaterminal"];
 
 
 
@@ -29,7 +29,7 @@ require_once ("funciones.php");
 			<?php
 			$consulta="SELECT * FROM TERMINAL WHERE IDTERMINAL = ".$datos_formulario['idterminal'];
 			$con=conectarBD();
-			$stmt=$con->query($consulta);
+			$stmt=consultabd($consulta,$con);
 			
 			foreach ($stmt as $fila) {
 			$datos["marca"]=$fila["MARCA"];

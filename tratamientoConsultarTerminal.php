@@ -1,11 +1,11 @@
 <?php
 session_start();
-$formulario = $_SESSION["formulario"];
+//$formulario = $_SESSION["formulario"];
 require_once("funciones.php");
-if (isset($formulario)) {
+if (!isset($formulario)) {
 	$formulario["marca"] = $_REQUEST["marca"];
 	$formulario["modelo"] = $_REQUEST["modelo"];
-	$_SESSION["formulario"] = $formulario;
+	$_SESSION["formulario_consulta_terminal"] = $formulario;
 } else
 	Header("Location:formularioConsultaTerminal.php");
 
