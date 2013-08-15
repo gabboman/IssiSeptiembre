@@ -14,6 +14,7 @@ $conexion = conectarBD();
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<link rel="stylesheet" type="text/css"  href="css/estilo_terminales.css">
 		<title>Éxito</title>
 	</head>
 	<body>
