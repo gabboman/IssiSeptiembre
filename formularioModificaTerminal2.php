@@ -16,6 +16,7 @@ require_once ("funciones.php");
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<link type="text/css" rel="stylesheet" href="css/estilo_formularioTerminal.css">
 		<title>Éxito</title>
 	</head>
 	<body>
