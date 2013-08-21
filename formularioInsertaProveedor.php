@@ -54,5 +54,20 @@ if (isset($_SESSION['errores']))
 				</div>
 			</form>
 		</div>
+		<div id="div_lateral">
+			<ul>
+				<li>
+					<a href="Index.html">Inicio</a>
+				</li>
+				<li>
+					<a href="Terminales.php">Terminales</a>
+				</li>
+				<li>
+					<a href="Proveedores.php">Proveedores</a>
+				</li>
+						
+					</ul>
+			</ul>
+		</div>
 	</body>
 </html>

@@ -5,6 +5,15 @@ body{
 
 }
 
+#div_lateral{
+	color:red;
+	position:center;
+	bottom:107px;
+	width:150px;
+	height:800px;
+	font-size:20px;
+}
+
 input,select{
 	border: 1px solid black;
 }

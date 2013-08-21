@@ -4,6 +4,14 @@ body{
 	background-repeat:no-repeat;
 }
 
+#div_lateral{
+	color:green;
+	position:top;
+	bottom:17px;
+	width:10px;
+	height:800px;
+	font-size:20px;
+}
 
 h1{
 	color:yellowgreen;

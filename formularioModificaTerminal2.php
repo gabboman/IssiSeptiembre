@@ -51,5 +51,20 @@ require_once ("funciones.php");
 				Pulse <a href="Terminales.php">aquí</a> para volver a Terminales.
 			</div>
 		</div>
+		<div id="div_lateral">
+			<ul>
+				<li>
+					<a href="Index.html">Inicio</a>
+				</li>
+				<li>
+					<a href="Terminales.php">Terminales</a>
+				</li>
+				<li>
+					<a href="Proveedores.php">Proveedores</a>
+				</li>
+						
+					</ul>
+			</ul>
+		</div>
 	</body>
 </html>

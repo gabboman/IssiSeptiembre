@@ -42,6 +42,21 @@ $con=conectarBD();
    </tr>';
   }
   ?>
+  <div id="div_lateral">
+			<ul>
+				<li>
+					<a href="Index.html">Inicio</a>
+				</li>
+				<li>
+					<a href="Terminales.php">Terminales</a>
+				</li>
+				<li>
+					<a href="Proveedores.php">Proveedores</a>
+				</li>
+						
+					</ul>
+			</ul>
+		</div>
  
 </table>
 
