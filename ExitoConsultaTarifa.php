@@ -23,14 +23,12 @@ $conexion = conectarBD();
 				$con=conectarBD();
 				$con2=conectarBD();
 				$stmt2=consultabd("SELECT * FROM OPERADORES WHERE NOMBRE LIKE '".$datos_formulario["operador"]."'",$con);
-				//$temp="a";
-				echo $datos_formulario["operador"];
 				foreach ($stmt2 as $fila2) {
 				$temp=$fila2["IDOPERADOR"];
 				$stmt=consultabd("SELECT * FROM TARIFAS WHERE IDOPERADOR LIKE ".$temp,$con2 );
 				foreach ($stmt as $fila) {
-				echo "Nombre tarifa: ".$fila["NOMBRETARIFA"]."<br>";
 				echo "Nombre del operador: ".$datos_formulario["operador"]."<br>";
+				echo "Nombre tarifa: ".$fila["NOMBRETARIFA"]."<br>";
 				echo "Precio por minuto: ".$fila["PRECIOMINUTO"]."<br>";
 				echo "Consumo mínimo: ".$fila["CONSUMOMINIMO"]."<br>";
 				echo "Cuota de internet: ".$fila["CUOTAINTERNET"]."<br>";

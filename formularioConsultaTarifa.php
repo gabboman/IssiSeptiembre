@@ -3,7 +3,7 @@ session_start();
 require_once("funciones.php");
 if (!isset($_SESSION['formulario_consulta_tarifa'])) {
 
-	$formulario['operador'] = "Movistar";
+	$formulario['operador'] = "movistar";
 	$_SESSION['formulario_consulta_tarifa'] = $formulario;
 } else
 	$formulario = $_SESSION['formulario_consulta_tarifa'];
