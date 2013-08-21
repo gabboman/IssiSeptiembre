@@ -16,7 +16,15 @@ h1{
 }
 
 #label_modelo,
-#label_marca
+#label_marca,
+#label_pantalla,
+#label_teclado,
+#label_meminterna,
+#label_memoriaexterna,
+#label_gpu,
+#label_cpu,
+#label_calidadcamara,
+#label_cantidad
 
 {
   display: block;
@@ -27,6 +35,7 @@ h1{
   font-weight : bold;
   font-size:20px;
 }
+
 
 
 input#modelo {

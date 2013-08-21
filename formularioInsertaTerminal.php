@@ -36,11 +36,11 @@ if (isset($_SESSION['errores']))
 			mostrarerrores($errores);
 		?>
 		<h1>Añadir Terminal</h1>
-		<div id="cabecera"></div>
-		<div id="div_formu">
+		
+
 			<?php
 			generaformularioInsertaTerminal('tratamientoInsertterminal.php',$formulario);
 			?>
-		</div>
+	
 	</body>
 </html>

@@ -5,13 +5,6 @@ body {
 	background-repeat:no-repeat;
 }
 
-#div_cabecera{
-	background:url(../IMG/MobileNation.JPG);
-	background-repeat:no-repeat;
-	height:90px;
-	position: relative;
-	bottom: 90px;
-}
 
 #div_lateral{
 	
@@ -27,4 +20,10 @@ body {
 	position:relative;
 	bottom:20px;
 	float: none;
+}
+
+#div_formu{
+	position:relative;
+	height:90px;
+	
 }
