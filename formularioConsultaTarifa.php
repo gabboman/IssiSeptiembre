@@ -25,7 +25,7 @@ if (isset($_SESSION['errores']))
 			mostrarerrores($errores);
 		?>
 		<h1>Consultar Tarifas</h1>
-		<div id="cabecera"></div>
+		
 		<div id="div_formu">
 			<form id="formulario" name="formulario" onsubmit="return validar()" action="tratamientoConsultarTarifa.php" method="post">
 

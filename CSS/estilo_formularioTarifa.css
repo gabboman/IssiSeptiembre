@@ -1,30 +1,24 @@
 body{
 	background-color : #EED5B7;
-	background:url(../IMG/movil.jpg);
+	background:url(../IMG/fondo_formtarifa.jpg);
 	background-repeat:no-repeat;
 }
 
-input,select{
-	border: 1px solid black;
 
-}
 h1{
-
+	color:yellowgreen;
 	text-align: center;
-}
-#div_cabecera{
-	
-	height:90px;
-	position: relative;
 	
 }
+
 #div_submit{
+	color:blue;
 	text-align : center;
 }
 
-#label_operador,
-#label_tarifa
+#label_operador
 {
+  color:MediumSpringGreen ;
   display: block;
   float: left;
   text-align: right;
