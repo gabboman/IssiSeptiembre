@@ -27,7 +27,6 @@ $conexion = conectarBD();
 				echo $datos_formulario["operador"];
 				foreach ($stmt2 as $fila2) {
 				$temp=$fila2["IDOPERADOR"];
-				echo $temp.'PATATAS<br>';
 				$stmt=consultabd("SELECT * FROM TARIFAS WHERE IDOPERADOR LIKE ".$temp,$con2 );
 				foreach ($stmt as $fila) {
 				echo "Nombre tarifa: ".$fila["NOMBRETARIFA"]."<br>";
