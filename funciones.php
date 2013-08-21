@@ -172,7 +172,7 @@ echo ' 			<form id="formulario" name="formulario" action="'.$accion.'" method="p
 				</div>
 				<div id="div_cantidad">
 					<label id="label_cantidad" for="terminal">cantidad</label>
-					<input id="cantidad" name="cantidad" type="number" required="required" min = "5" "value="'.$fuente["cantidad"].'"/>
+					<input id="cantidad" name="cantidad" type="number" required="required" min = "5" value="'.$fuente["cantidad"].'"/>
 				</div>
 				<div id="div_submit">
 					<input name="submit" id="submit" type="submit" class="submit" value="Enviar formulario" />
