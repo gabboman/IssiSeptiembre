@@ -1,31 +1,22 @@
 body {
 	font-family:'Times roman'; 
 	margin:0px;
-	background:url(../IMG/fondo_azul.jpg);
-	background-repeat:no-repeat;
-}
-
--#div_cabecera{
-	background:url(../IMG/MobileNation.JPG);
-	background-repeat:no-repeat;
-	height:90px;
-	position: relative;
-	bottom: 90px;
-}
-
-
-#div_lateral{
+	background:url(../IMG/moviles1.jpg);
 	
-	position:relative;
-	bottom:10px;
-	width:50px;
-	height:80px;
-	background:url(../IMG/lateral.jpg);	
+	
+}
+caption{
+font-size:40px;
+color:black;
 }
 
-
-#contacto{
-	position:relative;
-	bottom:20px;
-	float: none;
+th{
+font-size:30px;
+color:red;
 }
+
+td{
+font-size:25px;
+color:red;
+}
+

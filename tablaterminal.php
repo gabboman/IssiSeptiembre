@@ -4,6 +4,7 @@ require_once("funciones.php");
 $con=conectarBD();
 ?>
 <html>
+<head> <link type="text/css" rel="stylesheet" href="css/estilo_terminales.css"> </head>
 <body>
 
 <table border="1">
