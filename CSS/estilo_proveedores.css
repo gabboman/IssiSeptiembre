@@ -1,28 +1,8 @@
 body {
 	font-family:'Times roman'; 
 	margin:0px;
-	background:url(../IMG/proveedores.jpg);
+	background:url(../IMG/fondo_azul.jpg);
 	background-repeat:no-repeat;
-}
-#div_cabecera{
-	background:url(../IMG/MobileNation.JPG);
-	background-repeat:no-repeat;
-	height:90px;
-	position: relative;
-	bottom: 90px;
-}
-
-#div_lateral{
-	
-	position:relative;
-	bottom:107px;
-	width:150px;
-	height:800px;	
-}
-
-#contacto{
-	position:relative;
-	bottom:-20px;
-	float: none;
+	color:orange;
 }
 

@@ -8,7 +8,7 @@ require_once ("funciones.php");
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>MobileNation</title>
 		<link rel="shortcut icon" href="IMG/MobileNation.jpg">
-		<link rel="stylesheet" type="text/css"  href="css/estilo_index.css">
+		<link rel="stylesheet" type="text/css"  href="css/estilo_proveedores.css">
 	</head>
 	<body >
 		
