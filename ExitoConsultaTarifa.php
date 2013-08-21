@@ -31,6 +31,11 @@ $conexion = conectarBD();
 				$stmt=consultabd("SELECT * FROM TARIFAS WHERE IDOPERADOR LIKE ".$temp,$con2 );
 				foreach ($stmt as $fila) {
 				echo "Nombre tarifa: ".$fila["NOMBRETARIFA"]."<br>";
+				echo "Nombre del operador: ".$datos_formulario["operador"]."<br>";
+				echo "Precio por minuto: ".$fila["PRECIOMINUTO"]."<br>";
+				echo "Consumo mínimo: ".$fila["CONSUMOMINIMO"]."<br>";
+				echo "Cuota de internet: ".$fila["CUOTAINTERNET"]."<br>";
+				echo "Minutos gratuitos: ".$fila["NMINUTOSGRATUITO"]."<br>";
 				}
 				}
 				$con=desconectar();
