@@ -1,22 +1,22 @@
 body {
 	font-family:'Times roman'; 
 	margin:0px;
-	background:url(../IMG/moviles1.jpg);
+	background:url(../IMG/fondo_web.jpg);
 	
 	
 }
 caption{
 font-size:40px;
-color:black;
+color:violet;
 }
 
 th{
 font-size:30px;
-color:red;
+color:deepskyblue;
 }
 
 td{
 font-size:25px;
-color:red;
+color:violet;
 }
 
