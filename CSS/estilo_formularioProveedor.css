@@ -16,7 +16,7 @@ input,select{
 	border: 1px solid black;
 }
 h1{
-	color:orange;
+	color:blue;
 	font-size:60px;
 	text-align: center;
 }
@@ -36,7 +36,7 @@ h1{
   padding-right: 0.5em;
   font-weight : bold;  
   font-size:20px;
-  color:orange;
+  color:Chartreuse;
 }
 #label_letra{
 	 font-weight : bold;

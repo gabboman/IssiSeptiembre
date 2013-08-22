@@ -15,6 +15,7 @@ $conexion = conectarBD();
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<title>Éxito en la búsqueda. Seleccione un terminal</title>
+		<link type="text/css" rel="stylesheet" href="css/estilo_exitoTerminal.css">
 	</head>
 	<body>
 		<div>

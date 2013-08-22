@@ -36,9 +36,10 @@ h1{
   display: block;
   float: left;
   text-align: right;
-  width: 10em;
-  padding-right: 0.5em;
-  font-weight : bold;  
+  width:1em;
+  padding-right:0.5em;
+  font-weight:bold;  
+  font-size:20px;
 }
 
 input#operador {
