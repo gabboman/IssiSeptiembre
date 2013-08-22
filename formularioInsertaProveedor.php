@@ -29,7 +29,7 @@ if (isset($_SESSION['errores']))
 			mostrarerrores($errores);
 		?>
 		<h1>Añadir Proveedor</h1>
-		<div id="cabecera"></div>
+		
 		<div id="div_formu">
 			<form id="formulario" name="formulario"  action="tratamientoInsertProveedor.php" method="post">
 				<div id="div_nombre">

@@ -8,11 +8,13 @@ body {
 caption{
 font-size:40px;
 color:black;
+font-size:40px;
+font-weight:bold;
 }
 
 th{
 font-size:30px;
-color:green;
+color:darkgreen;
 }
 
 td{
