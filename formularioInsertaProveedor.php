@@ -1,5 +1,5 @@
 <?php
-
+require_once("funciones.php");
 session_start();
 
 if (!isset($_SESSION['formulario_inserta_proveedor'])) {
