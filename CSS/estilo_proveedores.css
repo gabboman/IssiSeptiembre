@@ -2,15 +2,16 @@ body {
 	font-family:'Times roman'; 
 	margin:0px;
 	background:url(../IMG/fondo_azul.jpg);
-	background-repeat:no-repeat;
-	color:orange;
+	background-repeat:no-repeat;color:orange;
 }
 
 #div_lateral{
-font-size:30px;
-color:red;
+	font-size:30px;
+	color:red;
+
 }
 #div_proveedor{
-	color:pink;
-	left:45px;	
+	color:orange;
+	left:50px;
+	position:absolute;
 	}

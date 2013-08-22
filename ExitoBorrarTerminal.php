@@ -17,6 +17,7 @@ require_once ("funciones.php");
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<title>Éxito</title>
+		<link rel="stylesheet" type="text/css"  href="css/estilo_estilo_exitoTerminal.css">
 	</head>
 	<body>
 		<div>

@@ -11,12 +11,10 @@ h1{
 	text-align: center;
 }
 #div_lateral{
-	color:red;
-	position:center;
-	bottom:107px;
-	width:150px;
-	height:800px;
-	font-size:20px;
+	color:green;
+	position:absolute;
+	top:5px;
+	font-size:25px;
 }
 
 #div_submit{
@@ -52,4 +50,5 @@ input#modelo {
 
 input#marca {
   width: 10em;
+  
 }

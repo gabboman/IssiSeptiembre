@@ -1,4 +1,5 @@
 <?php
+Header("Location:tablatarifas.php");
 require_once ("funciones.php");
 ?>
 
