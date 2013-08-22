@@ -22,9 +22,6 @@ color:blue;
 
 #div_lateral{
 	color:red;
-	position:center;
-	bottom:107px;
-	width:150px;
-	height:800px;
+	position:top;
 	font-size:20px;
 }

@@ -185,12 +185,17 @@ echo ' 			<form id="formulario" name="formulario" action="'.$accion.'" method="p
 
 
 function validarSeleccionProveedor($formulario){//revisar esto....
-	if ($formulario["dni"]<0){
-	$errores[]='Algo raro ha pasado, ha tocado usted algo donde no debía? Contacte con un administrador dandole este error: ERROR: DNI ERRONEO';
-		$log='warning: revisar proveedorde la pantalla no es válido!: '.$_SERVER['HTTP_USER_AGENT'] . "\n\n";
-		error(3,$log);
+foreach ($formulario as $clave => $valor){
+	if (!(isset($formulario[$clave]) && strlen($formulario[$clave]) > 0)){
+		$errores[] = 'El campo <b>'.$clave.'</b> no puede estar vacío';	
+		$log='warning: revisar insertaproveedor. envio formulario sin informacion valida de '.$clave.'. detalles del navegador del usuario: '.$_SERVER['HTTP_USER_AGENT'] . "\n\n";
+		error(3,$log);}
+    
 	}
+	return $errores;
 }
+	
+	
 	
 function validacionInsertaProveedor($formulario) {
 	foreach ($formulario as $clave => $valor){
@@ -201,8 +206,15 @@ function validacionInsertaProveedor($formulario) {
 	}
 	}
 
+	$sql = "SELECT count(*) FROM PROVEEDORES WHERE CIF like '".$formulario['cif']."'";
+	$con=conectarBD();
+	$res=consultabd($sql,$con);
+	$number_of_rows = $res->fetchColumn();
+	if($number_of_rows!=0){
+	$errores[]='Ya hay un proveedor con ese CIF, por favor, revise los datos';
  }
-
+	return $errores;
+ }
  
  
  function mostrarTerminal($term){

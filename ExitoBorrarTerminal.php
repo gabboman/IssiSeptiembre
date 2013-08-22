@@ -25,7 +25,7 @@ require_once ("funciones.php");
 			<?php
 			$consulta="DELETE FROM TERMINAL WHERE IDTERMINAL = ".$datos_formulario['idterminal'];
 			$con=conectarBD();
-			$stmt=$con->query($consulta);
+			$stmt=consultabd($consulta,$con);
 			echo 'terminal borrado'.'<br>';
 			?>
 			<div id="div_volver">

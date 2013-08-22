@@ -11,18 +11,6 @@ require_once ("funciones.php");
 		<link rel="stylesheet" type="text/css"  href="css/estilo_proveedores.css">
 	</head>
 	<body >
-		
-		<?php
-			$con=conectarBD();
-			$stmt=consultabd("SELECT * FROM PROVEEDORES",$con);
-			foreach ($stmt as $fila) {
-			echo "<h4>Proveedor
-			<br>";
-			mostrarproveedor($fila);
-			
-			echo "</h4>";
-			}
-		?>
 		<div id="div_lateral">
 			<ul>
 				<li>
@@ -35,8 +23,21 @@ require_once ("funciones.php");
 					<a href="Proveedores.php">Proveedores</a>
 				</li>
 						
-					</ul>
+				
 			</ul>
+		</div>
+		<div id="div_proveedor">
+		<?php
+			$con=conectarBD();
+			$stmt=consultabd("SELECT * FROM PROVEEDORES",$con);
+			foreach ($stmt as $fila) {
+			echo "<h4>Proveedor
+			<br>";
+			mostrarproveedor($fila);
+			
+			echo "</h4>";
+			}
+		?>
 		</div>
 		
 			
