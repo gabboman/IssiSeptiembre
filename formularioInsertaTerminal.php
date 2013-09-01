@@ -2,7 +2,7 @@
 
 session_start();
 require_once("funciones.php");
-if (!isset($_SESSION['formulario'])) {
+if (!isset($_SESSION['formularioInsertaTerminal'])) {
 
 
 	$formulario["marca"] = "HTC";
@@ -15,9 +15,9 @@ if (!isset($_SESSION['formulario'])) {
 	$formulario["cpu"]='500';
 	$formulario["calidadcamara"]='9';
 	$formulario["cantidad"]='5';
-	$_SESSION['formulario'] = $formulario;
+	$_SESSION['formularioInsertaTerminal'] = $formulario;
 } else
-	$formulario = $_SESSION['formulario'];
+	$formulario = $_SESSION['formularioInsertaTerminal'];
 
 if (isset($_SESSION['errores']))
 	$errores = $_SESSION['errores'];
