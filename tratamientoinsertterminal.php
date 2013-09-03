@@ -1,8 +1,8 @@
 <?php
 session_start();
-$formulario = $_SESSION["formulario"];
+//$formulario = $_SESSION["formulario"];
 require_once("funciones.php");
-if (isset($formulario)) {
+if (!isset($formulario)) {
 	$formulario["marca"] = $_REQUEST["marca"];
 	$formulario["pantalla"] = $_REQUEST["pantalla"];
 	$formulario["modelo"] = $_REQUEST["modelo"];
@@ -13,11 +13,12 @@ if (isset($formulario)) {
 	$formulario["cpu"] = $_REQUEST["cpu"];
 	$formulario["calidadcamara"] = $_REQUEST["calidadcamara"];
 	$formulario["cantidad"] = $_REQUEST["cantidad"];
-	$_SESSION["formulario"] = $formulario;
-} else
+	$_SESSION['formularioInsertaTerminal']=$formulario;
+} else{
 	Header("Location:formularioInsertaTerminal.php");
-
-$errores =validarInsertaTerminal($formulario);
+}
+	$errores =validarInsertaTerminal($formulario);
+	
 if (count($errores) > 0) {
 	$_SESSION["errores"] = $errores;
 	Header("Location:formularioInsertaTerminal.php");

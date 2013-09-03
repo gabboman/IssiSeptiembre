@@ -14,8 +14,9 @@ $conexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 }catch(PDOException $e){
 		session_destroy();
 		session_start();
-		$errores[]="Error conectando a la base de datos: ".$consulta."\r\nDETALLES: ".$e->GetMessage();
-		error(0,$errores);
+		$errores[]="Error conectando a la base de datos";
+		$errorlog[]="Error conectando a la base de datos: ".$consulta."\r\nDETALLES: ".$e->GetMessage();
+		error(0,$errorlog);
 		$_SESSION['errores'] = $errores;
 		header('Location: error.php');
 }
@@ -36,8 +37,9 @@ try{
 }catch(PDOException $e){
 		session_destroy();
 		session_start();
-		$errores[]="Error realizando el siguiente comando sql: ".$consulta."\r\nDETALLES: ".$e->GetMessage();
-		error(1,$errores);
+		$errores[]="Ha habido un error! Pero tranquilo, ha quedado registrado para que nuestros técnicos lo arreglen";
+		$errorlog[]="Error realizando el siguiente comando sql: ".$consulta."\r\nDETALLES: ".$e->GetMessage();
+		error(1,$errorlog);
 		$_SESSION['errores'] = $errores;
 		header('Location: error.php');
 }
@@ -85,7 +87,11 @@ function validarInsertaTerminal($formulario) {
 		error(3,$log);}
     
 	}
-	
+	if($formulario["cantidad"]<5){
+		$errores[]= 'La cantidad ha de ser mayor que 5';
+		$log='warning: revisar insertaterminal. envio formulario sin informacion valida de "cantidad". detalles del navegador del usuario: '.$_SERVER['HTTP_USER_AGENT'] . "\n\n";
+		error(3,log);
+	}
 	
 	if (!(preg_match("/^[0-9]+x[0-9]+$/", $formulario["pantalla"]))) {
 		$errores[]='La resolucion de pantalla debe ser del formato NxM siendo N y M números enteros';
@@ -239,7 +245,7 @@ function validacionInsertaProveedor($formulario) {
 
 	$ddf = fopen('logs/error.log','a');// ruta al archivo, append (poner al final)
 	foreach($texto as $linea){
-	fwrite($ddf,"[".date("r")."] Error $numero: $linea\r\n");//MODIFICAR PARA PODER USAR ARRAYS EN TEXTO!
+	fwrite($ddf,"[".date("r")."] Error $numero: $linea\r\n");
 	}
 	fclose($ddf);
 }

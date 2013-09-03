@@ -2,6 +2,7 @@
 
 session_start();
 require_once("funciones.php");
+$formulario;
 if (!isset($_SESSION['formularioInsertaTerminal'])) {
 
 
@@ -39,7 +40,9 @@ if (isset($_SESSION['errores']))
 		
 
 			<?php
+			$formulario=$_SESSION['formularioInsertaTerminal'];
 			generaformularioInsertaTerminal('tratamientoInsertterminal.php',$formulario);
+			//$_SESSION["errores"]=null;
 			?>
 			<div id="div_lateral">
 			<ul>
