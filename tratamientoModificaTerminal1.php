@@ -5,7 +5,7 @@ require_once("funciones.php");
 if (!isset($formulario)) {
 	$formulario["marca"] = $_REQUEST["marca"];
 	$formulario["modelo"] = $_REQUEST["modelo"];
-	$_SESSION["formulario"] = $formulario;
+	$_SESSION["modificaterminal1"] = $formulario;
 } else
 	Header("Location:formularioModificaTerminal1.php");
 

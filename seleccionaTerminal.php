@@ -1,6 +1,6 @@
 <?php
 session_start();
-$datos_formulario = $_SESSION["formulario"];
+$datos_formulario = $_SESSION["modificaterminal1"];
 
 
 

@@ -184,7 +184,7 @@ echo ' 			<form id="formulario" name="formulario" action="'.$accion.'" method="p
  }
 
 
-function validarSeleccionProveedor($formulario){//revisar esto....
+function validarSeleccionProveedor($formulario){
 foreach ($formulario as $clave => $valor){
 	if (!(isset($formulario[$clave]) && strlen($formulario[$clave]) > 0)){
 		$errores[] = 'El campo <b>'.$clave.'</b> no puede estar vacío';	

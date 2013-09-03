@@ -1,12 +1,12 @@
 <?php
 session_start();
 require_once("funciones.php");
-if (!isset($_SESSION['modificaterminal'])) {
+if (!isset($_SESSION['modificaterminal1'])) {
 	$formulario['marca'] = "HTC";
 	$formulario['modelo'] = "Galaxy S3";
-	$_SESSION['modificaterminal'] = $formulario;
+	$_SESSION['modificaterminal1'] = $formulario;
 } else
-	$formulario = $_SESSION['modificaterminal'];
+	$formulario = $_SESSION['modificaterminal1'];
 
 if (isset($_SESSION['errores']))
 	$errores = $_SESSION['errores'];
